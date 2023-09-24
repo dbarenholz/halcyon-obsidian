@@ -1,95 +1,67 @@
-This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)).
+# Halcyon for Obsidian
+%% TODO: Make an image in photoshop;
 
-## First Time publishing a theme?
+Logo - Halcyon                        [img from help vault note, include graph somewhere]
+Logo - for Obsidian                 [img from help vault note, include graph somewhere]
 
-### Quick start
+%%
+%% [logo](logo.png) %%
 
-<img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
+%% Placeholder - this is supposed to be a nice looking picture. %%
+%% [Theme Preview](preview.png) %%
 
-First, choose **Use this template**. That will create a copy of this repository (repo) under your Github profile. Then, you will want to _clone_ your new repository to your computer.
 
-Once you have the repo locally on your computer, there are a couple of placeholder fields you will need to fill in.
+I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only, but _soon_ very customizable through [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), see [customization](customization---style-settings).
 
-1. Inside the `manifest.json` file, change the "name" field to whatever you want the name of your theme to be. For example:
+## Installation
 
-  ```json
-  {
-    "name": "Moonstone",
-    "version": "0.0.0",
-    "minAppVersion": "1.0.0"
-  }
-  ```
+You can install Halcyon through Obsidian, or manually.
 
-2. Also inside the manifest.json file, you can include your name under next to the "author" field.
+### Through Obsidian (Recommended)
 
-After you have those fields configured, all that's left to do is add your styles! All of your CSS needs to be inside the file `theme.css` which is located at root of your repository.
+1. Go to `settings > appearance`.
+2. Click **Manage** next to _Themes_.
+3. Search for **Halcyon**.
+4. Click **Install and use**.
+5. Enjoy using my favourite theme! 🥳
 
-## Adding your theme to the Theme Gallery
+### Manual
 
-### Add a screenshot thumbnail
+> Note: manually installed themes do not get updated automatically.
+> You should prefer installing through obsidian if possible.
 
-Inside the repository, include a screenshot thumbnail of your theme. You can name the file anything, for example `screenshot.png`. This image will be used for the small preview in the theme list.
+1. Download [the latest release](#) as ZIP file.
+2. Extract the folder into your vault's `.obsidian/themes` folder.
+3. Go to `settings > appearance`.
+4. Select **Halcyon** from the dropdown list.
+5. Enjoy using my favourite theme! 🥳
 
-Your screenshot file should be `16:9` aspect ratio.
-The recommended size is 512x288.
+## Customization - Style Settings
 
-### Submit your theme for review
+_Coming very soon to an Obsidian Theme store near you!_
 
-To have your theme included in the Theme Gallery, you will need to submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
+## Known Issues
 
-## Releasing Versions _(Optional)_
+There are a few limitations that are outside of my control as theme developer. Here's a list of them.
 
-If your theme is getting more and more complex, you might want to start thinking about how your theme will stay compatible with different versions of Obsidian. Introduced in v0.16 of Obsidian, themes support [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This means that you can specify which versions of your theme are compatible with which versions of Obsidian.
+* Putting a [codeblock](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code+blocks>)  (` ```language `) inside a [quote](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Quotes>)  `>` is not recognized by the underlying parser.
+* We cannot style a `dataviewjs` codeblock from the [Dataview plugin](<obsidian://show-plugin?id=dataview>) the same way as normal `js`, because the underlying parser doesn't recognize it as `javascript`.
 
-### Steps for releasing the initial version of your theme (1.0.0)
+_Did you find more issues? [Let me know!](# link to making github issues using template)_
 
-1. From your theme's repository, click on "Releases".
-   
-<img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
+## License
 
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
+This theme is released under the [MIT License](#LICENSE). 
 
-<img width="202" alt="Pasted image 20220822145048" src="https://user-images.githubusercontent.com/693981/186000664-6c63ae14-f685-4d39-bfe6-324f95cd9669.png">
+## Credits and Acknowledgments
 
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+This theme would never have seen its conception, if not for the following people: 
+* [Brittany Chiang](https://brittanychiang.com/), for creating the Halcyon theme with a permissive license (MIT)!
+* Discord user [sailKite](https://github.com/sailKiteV), for surprising me with a first version of the theme out of the blue. **Thank you!**
+* Many members of the [OMG discord](https://discord.gg/obsidianmd) who have gone through many dark magics to help me fix my selectors and issues I had while creating the theme.
 
-<img width="946" alt="Pasted image 20220822145356" src="https://user-images.githubusercontent.com/693981/186000772-e689ecea-c3b7-4e9d-9204-7ad62c0123aa.png">
+## Changelog
 
-4. Click "Publish Release."
-5. Make sure that `versions.json` is set up correctly. This file is a map.
-  ```json
-  {
-    "1.0.0": "0.16.0"
-  }
-  ```
-  
-  This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
- 
-### Steps for releasing new versions
+**Version 0.0.1**: 
+* Github repository has been made public.
 
-Releasing a new version of your theme is the same as releasing the initial version.
-
-1. From your theme's repository, click on "Releases."
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
-
-4. Click "Publish Release."
-5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
-  ```json
-  {  
-		"1.0.0": "0.16.0",
-		"1.0.1": "0.16.0"
-  }
-  ```
-
-  What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
