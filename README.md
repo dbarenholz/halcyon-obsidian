@@ -57,7 +57,7 @@ This theme is released under the [MIT License](#LICENSE).
 
 This theme would never have seen its conception, if not for the following people: 
 * [Brittany Chiang](<https://brittanychiang.com/>), for creating the Halcyon theme with a permissive license (MIT)!
-* Discord user [sailKite](<https://sailkite.site/>), for surprising me with a first version of the theme out of the blue. **Thank you!**
+* Discord user [sailKite](<https://github.com/sailKiteV>), for surprising me with a first version of the theme out of the blue. **Thank you!**
 * Many members of the [OMG discord](<https://discord.gg/obsidianmd>) who have gone through many dark magics to help me fix my selectors and issues I had while creating the theme.
 
 ## Changelog
