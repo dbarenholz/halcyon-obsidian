@@ -11,7 +11,7 @@ Logo - for Obsidian                 [img from help vault note, include graph som
 %% [Theme Preview](preview.png) %%
 
 
-I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only, but _soon_ very customizable through [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), see [customization](customization---style-settings).
+I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only, but _soon_ very customizable through [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), see [customization](#customization---style-settings).
 
 ## Installation
 
