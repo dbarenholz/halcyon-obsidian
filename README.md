@@ -47,7 +47,7 @@ There are a few limitations that are outside of my control as theme developer. H
 * Putting a [codeblock](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Code+blocks>)  (` ```language `) inside a [quote](<https://help.obsidian.md/Editing+and+formatting/Basic+formatting+syntax#Quotes>)  `>` is not recognized by the underlying parser.
 * We cannot style a `dataviewjs` codeblock from the [Dataview plugin](<obsidian://show-plugin?id=dataview>) the same way as normal `js`, because the underlying parser doesn't recognize it as `javascript`.
 
-_Did you find more issues? [Let me know!](# link to making github issues using template)_
+_Did you find more issues? Let me know by making an [issue](<https://github.com/dbarenholz/halcyon-obsidian/issues>)!_
 
 ## License
 
