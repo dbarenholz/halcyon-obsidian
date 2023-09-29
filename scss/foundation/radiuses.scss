@@ -1,0 +1,7 @@
+/* Radiuses (half of default theme) */
+body:where(.theme-dark) {
+	--radius-s: 2px;
+	--radius-m: 4px;
+	--radius-l: 6px;
+	--radius-xl: 8px;
+}

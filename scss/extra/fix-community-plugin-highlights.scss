@@ -1,0 +1,4 @@
+/* Fix: community plugins highlights */
+body:where(.theme-dark) .community-item .suggestion-highlight {
+	color: var(--text-accent);
+}

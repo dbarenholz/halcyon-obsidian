@@ -1,0 +1,81 @@
+/* === The Halcyon Color Scheme === */
+body.theme-dark {
+	--halcyon-base-blue-01: #171c28; /* Workbench Background */
+	--halcyon-base-blue-02: #1d2433; /* Editor Background*/
+	--halcyon-base-blue-03: #2f3b54; /* Highlight, widgets, panel*/
+	--halcyon-base-blue-04: #6679a4; /* Dividers, subtle UI elements */
+	--halcyon-base-blue-05: #8695b7; /* Status bar text, buttons, etc. */
+	--halcyon-base-grey-dark: #a2aabc; /* Variables, property names, tabs */
+	--halcyon-base-grey-light: #d7dce2; /* Active text, anything that should be white */
+
+	--halcyon-accent: #ffcc66; /* Accent, list tree titles, badges, etc. */
+	--halcyon-accent-h: 40; /* Obsidian needs these. */
+	--halcyon-accent-s: 100; /* Obsidian needs these. */
+	--halcyon-accent-l: 70; /* Obsidian needs these. */
+
+	--halcyon-palette-cyan: #5ccfe6; /* - UI: Modified highlights */
+	--halcyon-palette-lime: #bae67e; /* - UI: Addition highlights */
+	--halcyon-palette-orange: #ffae57; /* Constants, operators */
+	--halcyon-palette-yellow: #ffd580; /* Functions, classes, object literal keys */
+	--halcyon-palette-lilac: #c3a6ff; /* Keywords, constants, template literals */
+	--halcyon-palette-salmon: #ef6b73; /* Deletion highlights, errors, warnings */
+
+	/* code colors */
+	--halcyon-code-variable: var(--halcyon-base-grey-dark);
+	--halcyon-code-function: var(--halcyon-palette-yellow);
+	--halcyon-code-operator: var(--halcyon-palette-orange);
+	--halcyon-code-error: var(--halcyon-palette-salmon);
+	--halcyon-code-keyword: var(--halcyon-palette-lilac);
+
+	/* extra colors -- used in obsidian base colors */
+	--halcyon-base-blue-01-02-mix: color-mix(
+		in hsl,
+		var(--halcyon-base-blue-01),
+		var(--halcyon-base-blue-02)
+	);
+	--halcyon-base-blue-02-03-mix: color-mix(
+		in hsl,
+		var(--halcyon-base-blue-02),
+		var(--halcyon-base-blue-03)
+	);
+	--halcyon-base-blue-03-04-mix: color-mix(
+		in hsl,
+		var(--halcyon-base-blue-03),
+		var(--halcyon-base-blue-04)
+	);
+	--halcyon-base-blue-04-05-mix: color-mix(
+		in hsl,
+		var(--halcyon-base-blue-04),
+		var(--halcyon-base-blue-05)
+	);
+	--halcyon-base-grey-mix: color-mix(
+		in hsl,
+		var(--halcyon-base-grey-light),
+		var(--halcyon-base-grey-dark)
+	);
+
+	/* semantic variables */
+	--halcyon-text-normal: var(--halcyon-base-grey-light);
+	--halcyon-text-muted: #8695b799; /* This is RGBA */
+
+	/* hover variants */
+	--halcyon-accent-hover: var(--halcyon-palette-yellow);
+
+	--halcyon-palette-lilac-hover: color-mix(
+		in hsl shorter hue,
+		var(--halcyon-palette-lilac),
+		var(--halcyon-base-grey-dark)
+	);
+	--halcyon-palette-cyan-hover: color-mix(
+		in hsl shorter hue,
+		var(--halcyon-palette-cyan),
+		var(--halcyon-base-grey-dark)
+	);
+
+	--halcyon-palette-blue: #7099db; /* Visual check with coolors.co for a match*/
+	--halcyon-palette-pink: #f9cff2; /* Visual check with coolors.co for a match*/
+	--halcyon-base-grey-tab: #71777f;
+	--halcyon-base-grey-token: #586582;
+	--halcyon-base-grey-scroll: #3f495e;
+	--halcyon-base-grey-scroll-hover: #5c6782;
+}

@@ -1,0 +1,13 @@
+/* make suggestions yellow */
+body:where(.theme-dark)
+	.prompt
+	> .prompt-results
+	> .suggestion-item
+	.suggestion-highlight {
+	color: var(--interactive-accent);
+}
+/* make typed text bold, and yellow */
+body:where(.theme-dark) .prompt input.prompt-input {
+	color: var(--interactive-accent);
+	font-weight: bold;
+}

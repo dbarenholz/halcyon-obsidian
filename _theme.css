@@ -1,0 +1,960 @@
+/*  
+    Based on [Halcyon Theme](https://halcyon-theme.netlify.app/)
+    courtesy of [Brittany Chiang](https://brittanychiang.com/)
+
+    Initial port by [sailKite](https://github.com/sailkitev).
+    Further polishing and publishing by [dbarenholz](https://github.com/dbarenholz)
+
+    Some further design decisions were made due to inconsistencies of the theme
+    through Sublime Text and VS Code.
+
+    Last Edit: 2023-09-24
+*/
+
+/* === The Halcyon Color Scheme === */
+body.theme-dark {
+	--halcyon-base-blue-01:    #171c28; /* Workbench Background */
+	--halcyon-base-blue-02:    #1d2433; /* Editor Background*/
+	--halcyon-base-blue-03:    #2f3b54; /* Highlight, widgets, panel*/
+	--halcyon-base-blue-04:    #6679a4; /* Dividers, subtle UI elements */
+	--halcyon-base-blue-05:    #8695b7; /* Status bar text, buttons, etc. */
+	--halcyon-base-grey-dark:  #a2aabc; /* Variables, property names, tabs */
+	--halcyon-base-grey-light: #d7dce2; /* Active text, anything that should be white */
+	
+    --halcyon-accent:          #ffcc66; /* Accent, list tree titles, badges, etc. */
+    --halcyon-accent-h:               40; /* Obsidian needs these. */
+    --halcyon-accent-s:              100; /* Obsidian needs these. */
+    --halcyon-accent-l:               70; /* Obsidian needs these. */
+
+    --halcyon-palette-cyan:    #5ccfe6; /* - UI: Modified highlights */
+	--halcyon-palette-lime:    #bae67e; /* - UI: Addition highlights */
+	--halcyon-palette-orange:  #ffae57; /* Constants, operators */
+	--halcyon-palette-yellow:  #ffd580; /* Functions, classes, object literal keys */
+	--halcyon-palette-lilac:   #c3a6ff; /* Keywords, constants, template literals */
+	--halcyon-palette-salmon:  #ef6b73; /* Deletion highlights, errors, warnings */ 
+    
+    /* code colors */
+    --halcyon-code-variable:   var(--halcyon-base-grey-dark);
+    --halcyon-code-function:   var(--halcyon-palette-yellow);
+    --halcyon-code-operator:   var(--halcyon-palette-orange);
+    --halcyon-code-error:      var(--halcyon-palette-salmon);
+    --halcyon-code-keyword:    var(--halcyon-palette-lilac);
+	
+    /* extra colors -- used in obsidian base colors */
+	--halcyon-base-blue-01-02-mix: color-mix(in hsl,
+		var(--halcyon-base-blue-01),
+		var(--halcyon-base-blue-02)
+	);
+	--halcyon-base-blue-02-03-mix: color-mix(in hsl,
+		var(--halcyon-base-blue-02),
+		var(--halcyon-base-blue-03)
+	);
+	--halcyon-base-blue-03-04-mix: color-mix(in hsl,
+		var(--halcyon-base-blue-03),
+		var(--halcyon-base-blue-04)
+	);
+	--halcyon-base-blue-04-05-mix: color-mix(in hsl,
+		var(--halcyon-base-blue-04),
+		var(--halcyon-base-blue-05)
+	);
+    --halcyon-base-grey-mix: color-mix(in hsl,
+        var(--halcyon-base-grey-light),
+        var(--halcyon-base-grey-dark)
+    );
+
+    /* semantic variables */
+    --halcyon-text-normal:     var(--halcyon-base-grey-light);
+    --halcyon-text-muted:      #8695b799; /* This is RGBA */
+
+    /* hover variants */
+    --halcyon-accent-hover:    var(--halcyon-palette-yellow);
+    
+	--halcyon-palette-lilac-hover:  color-mix(in hsl shorter hue,
+        var(--halcyon-palette-lilac),
+        var(--halcyon-base-grey-dark)
+	);
+    --halcyon-palette-cyan-hover: color-mix(in hsl shorter hue,
+        var(--halcyon-palette-cyan),
+        var(--halcyon-base-grey-dark)
+    );
+    
+	--halcyon-palette-blue:      #7099db; /* Visual check with coolors.co for a match*/
+	--halcyon-palette-pink:      #f9cff2; /* Visual check with coolors.co for a match*/
+	--halcyon-base-grey-tab:     #71777f; 
+	--halcyon-base-grey-token:   #586582; 
+	--halcyon-base-grey-scroll:  #3f495e; 
+    --halcyon-base-grey-scroll-hover: #5c6782; 
+}
+
+/* === Foundation === */
+
+/* Borders */
+/* Colors */
+body:is(.theme-dark) {
+    /* The 12 base colors is a neutral color palette ranging from dark to light (darkmode). */
+    --color-base-00:  var(--halcyon-base-blue-01);
+    --color-base-05:  var(--halcyon-base-blue-01-02-mix);
+    --color-base-10:  var(--halcyon-base-blue-02);
+    --color-base-20:  var(--halcyon-base-blue-02-03-mix);
+    --color-base-25:  var(--halcyon-base-blue-03);
+    --color-base-30:  var(--halcyon-base-blue-03-04-mix);
+    --color-base-35:  var(--halcyon-base-blue-04);
+    --color-base-40:  var(--halcyon-base-blue-04-05-mix);
+    --color-base-50:  var(--halcyon-base-blue-05);
+    --color-base-60:  var(--halcyon-base-grey-dark);
+    --color-base-70:  var(--halcyon-base-grey-mix);
+    --color-base-100: var(--halcyon-base-grey-light);
+
+    /* The accent color is used to draw attention to interactive elements, such as links and primary buttons, and can be overridden by the user under Settings → Appearance in the Obsidian app. */
+    --accent-h: var(--halcyon-accent-h);
+    --accent-s: var(--halcyon-accent-s);
+    --accent-l: var(--halcyon-accent-l);
+
+
+    /* Extended color variables define the broader range of colors used for status messages (errors, warnings, success), callouts, syntax highlighting, graph nodes, and Canvas elements */
+    --color-red:    var(--halcyon-palette-salmon);
+    --color-red-rgb: 239, 107, 115;
+    --color-orange: var(--halcyon-palette-orange);
+    --color-orange-rgb: 255, 174, 87;
+    --color-yellow: var(--halcyon-palette-yellow);
+    --color-yellow-rgb: 255, 204, 102;
+    --color-green:  var(--halcyon-palette-lime);
+    --color-green-rgb: 186, 230, 126;
+    --color-cyan:   var(--halcyon-palette-cyan);
+    --color-cyan-rgb: 92, 207, 230;
+    --color-blue:   var(--halcyon-palette-blue);
+    --color-blue-rgb: 112, 153, 219;
+    --color-purple: var(--halcyon-palette-lilac);
+    --color-purple-rgb: 195, 166, 255;
+    --color-pink:   var(--halcyon-palette-pink);
+    --color-pink-rgb: 249, 207, 242;
+
+
+    /* Semantic colors are derived from the base color palette based on their intended use. */
+	--background-primary:               var(--halcyon-base-blue-02);
+	--background-primary-alt:           var(--halcyon-base-blue-03);
+	--background-secondary:             var(--halcyon-base-blue-01);
+	--background-secondary-alt:         var(--halcyon-base-blue-02);
+
+	--background-modifier-hover:        var(--halcyon-base-blue-03);
+    --background-modifier-active-hover: var(--halcyon-base-blue-03);
+	--background-modifier-border:       var(--halcyon-base-blue-02-03-mix);
+	--background-modifier-border-hover: var(--halcyon-accent);
+	--background-modifier-border-focus: var(--halcyon-base-blue-04);
+    /* --background-modifier-error-rgb: ; already set by base theme nicely */
+    /* --background-modifier-error: ; already set by base theme nicely */
+    /* --background-modifier-error-hover: ; already set by base theme nicely */
+    /* --background-modifier-success-rgb: ; already set by base theme nicely */
+    /* --background-modifier-success: green; already set by base theme nicely */
+    --background-modifier-message: var(--halcyon-base-blue-02-03-mix); 
+	/* --background-modifier-form-field:   var(--halcyon-base-blue-02); */
+
+    /* Interactive Colors  */
+    --interactive-normal: color-mix(in hsl shorter hue, var(--background-primary) 75%, transparent);
+    --interactive-hover: var(--background-primary);
+	--interactive-accent: var(--halcyon-accent);
+    --interactive-accent-hsl: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+    --interactive-accent-hover: color-mix(in hsl shorter hue, var(--halcyon-accent) 75%, transparent);
+
+
+    /* Text Colors */
+	--text-normal:       var(--halcyon-text-normal);
+    --text-muted:        color-mix(in hsl, var(--halcyon-text-muted), var(--text-normal)); 
+	--text-faint:        var(--halcyon-text-muted);
+	--text-on-accent:    var(--halcyon-base-blue-03);
+	/* --text-on-accent-inverted: ; /* only used in canvas, default is fine */
+	--text-error:        var(--halcyon-palette-salmon);
+    --text-warning:      var(--halcyon-palette-salmon);
+    --text-success:      var(--halcyon-palette-lime);
+    --text-accent:       var(--halcyon-accent);
+    --text-accent-hover: var(--halcyon-accent-hover);
+	--text-selection:    color-mix(in hsl shorter hue, var(--halcyon-base-blue-03-04-mix) 35%, transparent);
+    --text-highlight-bg: var(--halcyon-base-blue-03);
+}
+/* Cursor */
+/* Icons */
+body:where(.theme-dark) {
+    /* --icon-size: ; already set */
+    --icon-stroke: 2px;
+    /* --icon-color: already set */
+    /* --icon-color-hover: already set */
+    --icon-color-active:  var(--interactive-accent);
+    --icon-color-focused: var(--interactive-accent);
+    /* --icon-opacity: ; already set */
+    /* --icon-opacity-hover: ; already set */
+    /* --icon-opacity-active: ; already set */
+    --clickable-icon-radius: 0;
+}
+/* Layers */
+/* Radiuses (half of default theme) */
+body:where(.theme-dark) {
+    --radius-s: 2px; 
+    --radius-m: 4px; 
+    --radius-l: 6px;
+    --radius-xl: 8px;
+}
+/* Spacing */
+/* Typography */
+body:where(.theme-dark) {
+	--bold-color:        var(--halcyon-palette-salmon);
+	--italic-color:      var(--halcyon-palette-salmon);
+}
+
+
+/* === Components === */
+
+/* Button */
+/* Checkbox */
+body:is(.theme-dark) {
+    /* --checkbox-radius: already set */
+    /* --checkbox-size: already set */
+    /* --checkbox-marker-color:  already set */
+    --checkbox-color: var(--halcyon-palette-lilac);
+    --checkbox-color-hover: var(--halcyon-palette-lilac-hover);
+    --checkbox-border-color: var(--halcyon-palette-lilac);
+    --checkbox-border-color-hover: var(--halcyon-palette-lilac-hover);
+    /* --checklist-done-decoration: already set */
+    /* --checklist-done-color: already set */
+}
+/* Color input */
+/* Dialog */
+/* Dragging */
+body:where(.theme-dark) {
+    --drag-ghost-background: var(--halcyon-base-blue-03);
+    --drag-ghost-text-color: var(--interactive-accent);
+}
+/* Indentation guides */
+/* Modal */
+body:where(.theme-dark) {
+	--modal-border-color:  var(--halcyon-base-blue-02);
+    /* --modal-background: ; already set */
+    /* --modal-width: ; already set */
+    /* --modal-height: ; already set */
+    /* --modal-max-width: ; already set */
+    /* --modal-max-height: ; already set */
+    /* --modal-max-width-narrow: ; already set */
+    /* --modal-border-width: ; already set */
+    /* --modal-border-color: ; already set */
+    /* --modal-radius: ; already set */
+    /* --modal-community-sidebar-width: ; already set */
+}
+/* Multi-select */
+/* Navigation */
+body:where(.theme-dark) {
+    /* --nav-item-size: ; already set */
+     --nav-item-color: var(--text-muted); 
+    /* --nav-item-color-hover: ; already set */
+    --nav-item-color-active: var(--interactive-accent);
+    --nav-item-color-selected: var(--halcyon-palette-orange);
+    /* --nav-item-color-highlighted: ; already set */
+    /* --nav-item-background-hover: ; already set */
+    /* --nav-item-background-active: ; already set */
+    --nav-item-background-selected: var(--halcyon-base-blue-03);
+    /* --nav-item-padding: ; already set */
+    /* --nav-item-parent-padding: ; already set */
+    /* --nav-item-children-padding-left: ; already set */
+    /* --nav-item-children-margin-left: ; already set */
+    /* --nav-item-weight: ; already set */
+    /* --nav-item-weight-hover: ; already set */
+    /* --nav-item-weight-active: ; already set */
+    /* --nav-item-white-space: ; already set */
+    /* --nav-indentation-guide-width: ; already set */
+    /* --nav-indetation-guide-color: var(--halcyon-accent); */
+    /* --nav-collapse-icon-color: var(--halcyon-accent); */
+    /* --nav-collapse-icon-color-collapsed: already set */
+}
+/* Popover */
+/* Prompt */
+body:where(.theme-dark) {
+    /* --prompt-width: ; already set */
+    /* --prompt-max-width: ; already set */
+    /* --prompt-max-height: ; already set */
+    /* --prompt-border-width: ; already set */
+	--prompt-border-color: var(--halcyon-base-blue-02-03-mix);
+}
+/* Prompt: Extra */
+/* make suggestions yellow */
+body:where(.theme-dark) .prompt > .prompt-results > .suggestion-item .suggestion-highlight {
+    color: var(--interactive-accent);
+}
+/* make typed text bold, and yellow */
+body:where(.theme-dark) .prompt input.prompt-input {
+    color: var(--interactive-accent);
+    font-weight: bold;
+}
+/* Tabs */
+body:where(.theme-dark) {
+    /* --tab-background-active: already set */
+    /* --tab-text-color:  already set */
+	--tab-text-color-active: var(--text-accent);
+	/* --tab-text-color-focused:  already set */
+	--tab-text-color-focused-active: var(--text-accent);
+    /* --tab-text-color-focused-highlighted: already set */
+	--tab-text-color-focused-active-current: var(--text-accent);
+    /* --tab-font-size */
+    /* --tab-font-weight */
+    /* --tab-container-background: already set; */
+	--tab-divider-color: var(--titlebar-background);
+    
+    /* --tab-outline-color: var(--halcyon-accent); */
+    --tab-outline-width: 0px;
+    --tab-curve: 0px;
+    --tab-radius: 0px;
+    --tab-radius-active: 0px;
+    /* --tab-width: 100%; */
+    /* --tab-max-width: ; */
+}
+/* Tabs: Extra */
+/* Remove left padding and top margin in a tab group: approximate rectangular tabs */
+body:where(.theme-dark) .workspace-split:not(.mod-left-split, .mod-right-split)
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+/* Counterbalance: add padding internally instead. */
+body:where(.theme-dark) .workspace-split:not(.mod-left-split, .mod-right-split)
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title {
+    padding-left: 10px;
+}
+/* Counterbalance #2: remove padding from icons */
+body:where(.theme-dark) .workspace-split:not(.mod-left-split, .mod-right-split)
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-icon {
+    padding-right: 0px;
+}
+/* Counterbalance #3: align tabs back with the + and dropdown icons */
+body:where(.theme-dark) .workspace-split:not(.mod-left-split, .mod-right-split)
+.workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner > .workspace-tab-header {
+    padding: 3px 6px 0;
+}
+/* Add line to tabs: line itself */
+body:where(.theme-dark) .workspace-tabs:not(.mod-stacked) .workspace-tab-header:is(.mod-active, .is-active) > .workspace-tab-header-inner {
+	border-bottom: 1px solid var(--interactive-accent);
+}
+/* Add line to tabs: line on hover */
+body:where(.theme-dark) .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-header-inner:hover {
+	border-bottom: 1px solid var(--interactive-accent);
+}
+/* Add line to tabs: sneaky hack to fix spacing */
+body:where(.theme-dark) .workspace-tabs:not(.mod-stacked) .workspace-tab-header > .workspace-tab-header-inner {
+	border-bottom: 1px solid var(--background-secondary);
+}
+/* Sidebar tabs: align with main tabs */
+body:where(.theme-dark) :is(.mod-left-split, .mod-right-split) .workspace-tab-header-container-inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    gap: 1px;
+    padding-left: 0;
+}
+/* Text input */
+body:where(.theme-dark) {
+    /* --input-height: ; */
+    --input-radius: 0px;
+    /* --input-font-weight: ; */
+    /* --input-border-width: ; */
+}
+/* Text input: Extra */
+/* Set the active/focused color of inputs to accent color, but NOT on checkboxes */
+body:is(.theme-dark) :is(
+    textarea,
+    input:not([type="checkbox"]),
+    input.metadata-input-text,
+    select
+):is(
+    :focus,
+    :active,
+    :focus-visible
+), 
+body:is(.theme-dark) .metadata-property:is(:focus, :focus-within),
+body:is(.theme-dark) .text-icon-button:focus,
+body:is(.theme-dark) .metadata-properties-heading:focus:before {
+    box-shadow: 0 0 0 1px var(--interactive-accent);
+}
+
+/* Fix: selecting text in input elements */
+body:is(.theme-dark) .metadata-input-longtext::selection,
+body:is(.theme-dark) input::selection,
+body:is(.theme-dark) textarea::selection {
+    background-color: var(--halcyon-base-blue-03-04-mix);
+}
+
+/* Toggle */
+body:where(.theme-dark) {
+    /* --toggle-border-width: 10px; */
+    /* --toggle-width: 1px; */
+    /* --toggle-radius: 0px; */
+    --toggle-thumb-color: var(--text-on-accent);
+    /* --toggle-thumb-radius: 0px; */
+    /* --toggle-thumb-height: ; */
+    /* --toggle-thumb-width: ; */
+    /* --toggle-s-border-width: ; */
+    /* --toggle-s-width: ; */
+    /* --toggle-s-thumb-height: ; */
+    /* --toggle-s-thumb-width: ; */
+}
+/* Toggle: Extra */
+/* Make sure difference between on/off is better visible. */
+body:where(.theme-dark) .checkbox-container {
+    background-color: var(--halcyon-palette-salmon);
+}
+body:where(.theme-dark) .checkbox-container.is-enabled {
+    background-color: var(--halcyon-palette-lime);
+}
+
+
+/* === Editor === */
+
+
+/* Block */
+/* Blockquote */
+body:where(.theme-dark) {
+    --blockquote-color: color-mix(in srgb,
+        var(--halcyon-palette-yellow) 75%, 
+        var(--halcyon-text-normal)
+    );
+}
+/* Blockquote: Extra */
+/* Make blockquote small caps, but not in codeblocks. */
+body:is(.theme-dark) .markdown-rendered blockquote,
+body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) span.cm-quote:not(.cm-inline-code) {
+    font-variant: small-caps;
+}
+body:is(.theme-dark) .markdown-rendered blockquote :is(pre, code) {
+    font-variant: normal;
+}
+
+/* Fix source/lp: Italics in quotes should have italic color. */
+body:where(.theme-dark) .cm-em.cm-quote {
+    color: var(--italic-color);
+}
+/* Fix source/lp: Bolds in quotes should have bold color. */
+body:where(.theme-dark) .cm-strong.cm-quote {
+    color: var(--bold-color);
+}
+/* Callout */
+body:where(.theme-dark) {
+    /* --callout-border-width: ; */
+    /* --callout-border-opacity: ; */
+    --callout-padding: var(--size-4-3) var(--size-4-6);
+    /* --callout-radius: ; */
+    /* --callout-blend-mode: multiply; */
+    /* --callout-title-color: red; */
+    /* --callout-title-padding: 10px; */
+    /* --callout-title-size: ; */
+    /* --callout-content-padding: 0px; */
+    /* --callout-content-background: black; */
+    /* --callout-bug	bug */
+    /* --callout-default: var(--color-pink-rgb); */
+    /* --callout-error	error, danger */
+    /* --callout-example	example */
+    /* --callout-fail	fail, failure, missing */
+    /* --callout-important	important */
+    /* --callout-info	info */
+    /* --callout-question	question, help, faq */
+    /* --callout-success	success, check, done */
+    /* --callout-summary	summary, abstract, tldr */
+    /* --callout-tip	tip, hint */
+    /* --callout-todo	todo */
+    /* --callout-warning	warning, caution, attention */
+    /* --callout-quote	quote, cite */
+}
+/* Callout: Extra */
+/* Fix: Callouts in live preview */
+body:where(.theme-dark) .markdown-source-view:is(.is-live-preview) .callout-content >.callout {
+    margin: 1em 0;
+    padding: var(--callout-padding);
+}
+/* Fix: codeblocks in callouts in live preview */
+body:where(.theme-dark) .markdown-source-view:is(.is-live-preview) .callout-content > pre {
+    margin: 1em 0;
+}
+/* Code */
+body:where(.theme-dark) {
+	--code-background:  var(--halcyon-base-blue-01);
+    /* --code-white-space */
+    /* --code-size */
+    --code-normal:      var(--halcyon-palette-cyan);
+    --code-comment:     var(--text-faint);
+	--code-function:    var(--halcyon-code-function);
+    --code-important:   var(--halcyon-code-error);
+    --code-keyword:     var(--halcyon-code-keyword);
+    --code-property:    var(--text-muted);
+	--code-operator:    var(--halcyon-code-operator);
+    --code-punctuation: var(--halcyon-palette-lilac);
+	--code-string:      var(--halcyon-palette-lime);
+    --code-tag:         var(--halcyon-base-grey-dark);
+    /* --code-value: red; */
+}
+/* Code: Extra */
+/* Set tab-indented codeblocks to orange */
+body:where(.theme-dark) .cm-s-obsidian span.cm-inline-code {
+    color: var(--halcyon-palette-orange);
+}
+/* Embed */
+/* body:where(.theme-dark) { */
+    /* --embed-max-height: ; */
+    /* --embed-canvas-max-height: ; */
+    /* --embed-background: red; */
+    /* --embed-border-left: ; */
+    /* --embed-border-right: ; */
+    /* --embed-border-top: ; */
+    /* --embed-border-bottom: ; */
+    /* --embed-padding: ; */
+    /* --embed-font-style: ; */
+/* } */
+/* File */
+body:where(.theme-dark) {
+    --file-line-width: 50rem;
+    /* --file-folding-offset: ; */
+    /* --file-margins: ; */
+    /* --file-header-font-size: ; */
+    /* --file-header-font-weight: ; */
+    /* --file-header-border: ; */
+    /* --file-header-justify: ; */
+}
+/* Footnote */
+/* Headings */
+body:where(.theme-dark) {
+    /* --heading-formatting: ; */
+	--h1-color: var(--halcyon-palette-lime);
+	--h2-color: var(--halcyon-palette-lime);
+	--h3-color: var(--halcyon-palette-lime);
+	--h4-color: var(--halcyon-palette-lime);
+	--h5-color: var(--halcyon-palette-lime);
+	--h6-color: var(--halcyon-palette-lime);
+    /* --h1-font: ; */
+    /* --h2-font: ; */
+    /* --h3-font: ; */
+    /* --h4-font: ; */
+    /* --h5-font: ; */
+    /* --h6-font: ; */
+    /* --h1-line-height: ; */
+    /* --h2-line-height: ; */
+    /* --h3-line-height: ; */
+    /* --h4-line-height: ; */
+    /* --h5-line-height: ; */
+    /* --h6-line-height: ; */
+    /* --h1-size: ; */
+    /* --h2-size: ; */
+    /* --h3-size: ; */
+    /* --h4-size: ; */
+    /* --h5-size: ; */
+    /* --h6-size: ; */
+    /* --h1-style: ; */
+    /* --h2-style: ; */
+    /* --h3-style: ; */
+    /* --h4-style: ; */
+    /* --h5-style: ; */
+    /* --h6-style: ; */
+    /* --h1-variant: ; */
+    /* --h2-variant: ; */
+    /* --h3-variant: ; */
+    /* --h4-variant: ; */
+    /* --h5-variant: ; */
+    /* --h6-variant: ; */
+    --h1-weight: 700;
+    --h2-weight: 675;
+    --h3-weight: 650;
+    --h4-weight: 625;
+    --h5-weight: 600;
+    --h6-weight: 575;
+}
+/* Horizontal rule */
+body:where(.theme-dark) {
+    --hr-color: color-mix(in hsl shorter hue,
+        var(--text-faint), 
+        var(--background-modifier-border)
+    )
+    /* --hr-thickness: ; */
+}
+/* Inline title */
+/* Link */
+body:where(.theme-dark) {
+    --link-color: var(--halcyon-palette-lilac);
+    --link-color-hover: var(--halcyon-palette-lilac-hover);
+    /* --link-decoration: ; */
+    /* --link-decoration-hover: ; */
+    /* --link-decoration-thickness: ; */
+    --link-unresolved-color: var(--halcyon-palette-lilac);
+    /* --link-unresolved-opacity: ; */
+    /* --link-unresolved-filter: ; */
+    --link-unresolved-decoration-style: dashed;
+    /* --link-unresolved-decoration-color: ; */
+    --link-external-color: var(--halcyon-palette-lilac);
+    --link-external-color-hover: var(--halcyon-palette-lilac-hover);
+    /* --link-external-decoration: ; */
+    /* --link-external-decoration-hover: ; */
+}
+/* Lists */
+body:where(.theme-dark) {
+    /* --list-indent: ; */
+    /* --list-spacing: ; */
+    --list-marker-color: var(--halcyon-palette-lilac);
+    --list-marker-color-hover: var(--halcyon-palette-lilac-hover);
+    --list-marker-color-collapsed: var(--halcyon-palette-lime);
+    /* --list-bullet-border: ; */
+    /* --list-bullet-radius: ; */
+    /* --list-bullet-size: ; */
+    /* --list-bullet-transform: ; */
+    /* --list-numbered-style: ; */
+}
+/* Lists: Extra */
+/* Task lists: make brackets purple */
+body:where(.theme-dark) .cm-formatting.cm-formatting-task {
+    color: var(--halcyon-palette-lilac);
+}
+/* Properties*/
+body:where(.theme-dark) {
+    /* --metadata-background: green; */
+    /* --metadata-display-editing: ""; */
+    /* --metadata-display-reading: ; */
+    /* --metadata-max-width: unset; */
+    /* --metadata-padding: ; */
+    /* --metadata-border-color: red; */
+    /* --metadata-border-radius: ; */
+    /* --metadata-border-width: ; */
+    /* --metadata-gap: ; */
+    /* --metadata-divider-color: green; */
+    /* --metadata-divider-color-hover: ; */
+    /* --metadata-divider-color-focus: ; */
+    /* --metadata-divider-width: ; */
+    /* --metadata-property-padding: ; */
+    /* --metadata-property-radius: ; */
+    /* --metadata-property-background: ; */
+    /* --metadata-property-background-hover: ; */
+    /* --metadata-property-background-active: ; */
+    /* --metadata-label-background-hover: ; */
+    /* --metadata-label-background-active: ; */
+    /* --metadata-label-font-size: ; */
+    /* --metadata-label-font-weight: ; */
+    /* --metadata-sidebar-label-font-size: ; */
+    --metadata-label-text-color: var(--halcyon-palette-cyan);
+    --metadata-label-text-color-hover: var(--halcyon-palette-cyan-hover);
+    /* --metadata-label-width: ; */
+    /* --metadata-input-height: ; */
+    /* --metadata-input-text-color: var(--halcyon-palette-lime); */
+    /* --metadata-input-font-size: ; */
+    /* --metadata-sidebar-input-font-size: ; */
+    /* --metadata-input-background: red; */
+    /* --metadata-input-background-hover: ; */
+    /* --metadata-input-background-active: ; */
+}
+/* Properties: Extra */
+/* Properties in Source: Make keys blue */
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
+    color: var(--color-cyan);
+}
+/* Properties in Source: Make semicolon and list dashes orange */
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-meta {
+    color: var(--color-orange)
+}
+/* Properties in Source: Make values green */
+body:where(.theme-dark) .cm-hmd-frontmatter {
+    color: var(--color-green)
+}
+/* Properties: Make icons blue. */
+body:where(.theme-dark) .metadata-property-icon {
+    color: var(--halcyon-palette-cyan);
+}
+/* Table */
+body:where(.theme-dark) {
+    --table-background: var(--background-primary);
+    /* --table-border-width: ; */
+    /* --table-border-color: var(--halcyon-palette-cyan); */
+    /* --table-white-space: ; */
+    /* --table-header-background:  var(--background-secondary); */
+    /* --table-header-background-hover: ; */
+    /* --table-header-border-width: ; */
+    /* --table-header-border-color: ; */
+    /* --table-header-font: ; */
+    --table-header-size: larger;
+    /* --table-header-weight: ; */
+    /* --table-header-color: var(--halcyon-accent); */
+    /* --table-text-size: ; */
+    /* --table-text-color: ; */
+    /* --table-column-max-width: ; */
+    /* --table-column-alt-background: unset; */
+    /* --table-column-first-border-width: ; */
+    /* --table-column-last-border-width: ; */
+    /* --table-row-background-hover: red; */
+    /* --table-row-alt-background: var(--background-secondary); */
+    /* --table-last-border-width: ; */
+}
+/* Tags */
+body:where(.theme-dark) {
+    --tag-size:        var(--code-size);
+	--tag-color:       var(--halcyon-palette-cyan);
+    --tag-color-hover: var(--halcyon-palette-cyan);
+    /* --tag-decoration:  underline; */
+    --tag-decoration-hover: underline;
+	--tag-background: color-mix(in hsl shorter hue, var(--tag-color) 25%, transparent);
+    --tag-background-hover: color-mix(in hsl shorter hue, var(--tag-color-hover) 25%, transparent);
+    /* --tag-border-color: ; */
+    /* --tag-border-color-hover: ; */
+    /* --tag-border-width: ; */
+    /* --tag-padding-x: 8px; */
+    /* --tag-padding-y: 1px; */
+    /* --tag-radius: 8px; */
+    /* --tag-weight: 450; */
+}
+
+
+/* === Plugins (Core Plugins) === */
+
+
+/* Canvas */
+/* File explorer */
+body:where(.theme-dark) {
+    --vault-name-font-size: 1em;
+    /* --vault-name-font-weight: ; */
+    --vault-name-color: var(--interactive-accent);
+}
+/* File explorer: Extra */
+body:where(.theme-dark):not(.is-grabbing) :is(.nav-file-title:hover, .nav-folder-title:hover) {
+    color: var(--interactive-accent-hover);    
+}
+/* Graph */
+body:where(.theme-dark) {
+    /* --graph-controls-width: ; */
+    /* --graph-text: red; */
+    --graph-line: var(--halcyon-base-blue-03);
+    /* --graph-node: ; */
+    --graph-node-unresolved: var(--halcyon-palette-salmon);
+    /* --graph-node-focused: ; */
+    --graph-node-tag: var(--halcyon-palette-lilac);
+    /* --graph-node-attachment: ; */
+}
+/* Search */
+body:where(.theme-dark) {
+    --search-clear-button-color: var(--halcyon-palette-salmon);
+    /* --search-clear-button-size: ; */
+    --search-icon-color: var(--halcyon-accent);
+    /* --search-icon-size: 10px; */
+    /* --search-result-background: green; */
+}
+
+
+/* === Window === */
+
+
+/* Divider */
+/* Divider: Extra */
+/* Vertical border line right of left sidebar */
+body:where(.theme-dark) .workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+    border-right-width: 0px;
+}
+/* Vertical border line left of right sidebar */
+body:where(.theme-dark) .workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+    border-left-width: 0px;
+}
+/* Horizontal border lines between tab groups */
+body:where(.theme-dark) .workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+    border-bottom-width: 0px;
+}
+/* Ribbon */
+body:where(.theme-dark) {
+    /* --ribbon-background: ; */
+    --ribbon-background-collapsed: var(--ribbon-background);
+    /* --ribbon-width: ; */
+    /* --ribbon-padding: ; */
+}
+/* Ribbon: Extra */
+/* Vertical border line right of ribbon */
+body:where(.theme-dark) .workspace-ribbon {
+    border-right: unset;
+}
+/* Scrollbar */
+body:where(.theme-dark) {
+    --scrollbar-bg: transparent;
+    /* --scrollbar-thumb-bg: transparent; */
+	/* --scrollbar-active-thumb-bg: green; */
+}
+/* Scrollbar: Extra / Fix */
+body:not(.native-scrollbars) ::-webkit-scrollbar {
+    background-color: var(--scrollbar-bg);
+    width: 7px;
+}
+/* Sidebar */
+/* Status Bar */
+/* Window frame */
+body:where(.theme-dark) {
+    --titlebar-background: var(--background-secondary);
+    --titlebar-background-focused: var(--background-secondary);
+    /* --titlebar-border-width: already set */
+    --titlebar-border-color: var(--background-modifier-border);
+    --titlebar-text-color: var(--text-faint);
+    --titlebar-text-color-focused: var(--text-muted);
+    /* --titlebar-text-weight: already set */
+    /* --header-height: ; */
+}
+/* Workspace */
+body:where(.theme-dark) {
+    --workspace-background-translucent: unset;
+}
+
+/* === Extra / Fixes === */
+
+
+/* Fix border radius */
+body:where(.theme-dark) .metadata-property:focus,
+body:where(.theme-dark) .metadata-property:focus-within,
+body:where(.theme-dark) .metadata-properties-heading:focus:before {
+    border-radius: 2px;
+}
+
+/* give color to tree item icons on hover in link panes */
+body:where(.theme-dark) :is(.backlinks-pane, .outgoing-link-pane) .tree-item-self:hover .tree-item-icon > svg {
+    stroke: var(--halcyon-accent);
+}
+/* Make search results not yellow */
+body:where(.theme-dark) .search-result:not(.is-collapsed) .search-result-file-title {
+    color: var(--text-normal);
+}
+body:where(.theme-dark) .search-result:not(.is-collapsed) .search-result-file-matched-text {
+    color: var(--text-accent);
+    font-weight: bold;
+}
+/* Make search background not yellow */
+body:where(.theme-dark) .search-input-container > input{
+    background-color: var(--background-primary);
+}
+
+/* Fix: community plugins highlights */
+body:where(.theme-dark) .community-item .suggestion-highlight {
+    color: var(--text-accent);
+}
+
+/* Fix: do not color links in comments */
+body:is(.theme-dark) :is(.cm-comment.cm-hmd-internal-link, .cm-comment.cm-link, .cm-comment.cm-string) {
+    color: var(--code-comment);
+}
+/* Fix: do not underline links on comments */
+body:is(.theme-dark) :is(.cm-comment.cm-string, .cm-comment.cm-hmd-internal-link:hover, .cm-comment.cm-link:hover) {
+    text-decoration: none;
+}
+
+
+/* Make normal markdown tables also take full size */
+body:is(.theme-dark) table:not(.table-view-table) {
+    width: 100%;
+}
+
+/* Fix: User experience: for using plain markdown links to something that doesn't exist (by sailKite).*/
+body:is(.theme-dark) h3[data-heading*="find section #"] a.tag {
+    all: unset;
+}
+
+
+
+/* === Community Plugin Support === */
+
+
+/* Dataview Tables: give me my borders back */
+body:is(.theme-dark) .table-view-table > :is(thead, tbody) > tr > :is(th, td) {
+    border: 1px solid var(--table-header-border-color);
+}
+
+/* Dynamic Highlights (by sailKite) */
+body:where(.theme-dark) .modal .cm-gutters {
+    color: var(--halcyon-accent);
+}
+body:where(.theme-dark) .modal .cm-line {
+    color: var(--text-normal);
+
+    & :is(.ͼi, .ͼj) {
+        color: var(--halcyon-palette-orange);
+    }
+
+    & .ͼc {
+        color: var(--halcyon-accent);
+    }
+
+    & .ͼb {
+        color: var(--halcyon-palette-yellow);
+    }
+
+    & .cm-matchingBracket {
+        color: var(--halcyon-palette-lilac);
+    }
+}
+
+
+/* Highlightr: colors */
+
+/* pink */
+body:is(.theme-dark) :is(.hltr-pink, mark.hltr-pink, .markdown-preview-view mark.hltr-pink) {
+    background: rgba(var(--color-pink-rgb), 65%);
+}
+/* red */
+body:is(.theme-dark) :is(.hltr-red, mark.hltr-red, .markdown-preview-view mark.hltr-red) {
+    background: rgba(var(--color-red-rgb), 65%);
+}
+/* orange */
+body:is(.theme-dark) :is(.hltr-orange, mark.hltr-orange, .markdown-preview-view mark.hltr-orange) {
+    background: rgba(var(--color-orange-rgb), 65%);
+}
+/* yellow */
+body:is(.theme-dark) :is(.hltr-yellow, mark.hltr-yellow, .markdown-preview-view mark.hltr-yellow) {
+    background: rgba(var(--color-yellow-rgb), 65%);
+}
+/* green */
+body:is(.theme-dark) :is(.hltr-green, mark.hltr-green, .markdown-preview-view mark.hltr-green) {
+    background: rgba(var(--color-green-rgb), 65%);
+}
+/* cyan */
+body:is(.theme-dark) :is(.hltr-cyan, mark.hltr-cyan, .markdown-preview-view mark.hltr-cyan) {
+    background: rgba(var(--color-cyan-rgb), 65%);
+}
+/* blue */
+body:is(.theme-dark) :is(.hltr-blue, mark.hltr-blue, .markdown-preview-view mark.hltr-blue) {
+    background: rgba(var(--color-blue-rgb), 65%);
+}
+/* purple */
+body:is(.theme-dark) :is(.hltr-purple, mark.hltr-purple, .markdown-preview-view mark.hltr-purple) {
+    background: rgba(var(--color-purple-rgb), 65%);
+}
+
+/* Highlightr: stylistic fixes */
+
+/* Rounded: overridde padding so multiple lines do not overlap */
+body.theme-dark.highlightr-rounded :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Realistic: overridde padding so multiple lines do not overlap */
+body.theme-dark.highlightr-realistic :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Lowlight: start gradient later, and have it fade away*/
+body.theme-dark.highlightr-lowlight :is(mark, span.cm-highlight, .markdown-preview-view mark) {
+    --lowlight-background: var(--background-primary);
+    background-image: linear-gradient(
+        0,
+        var(--lowlight-background) 10%,
+        rgba(var(--mono-rgb-0), 0) 10%,
+        rgba(var(--mono-rgb-0), 0) 25%,
+        var(--lowlight-background) 40%
+    ) !important
+}
+
+/* Floating: READING fix the _last_ element in a single block to have consistent padding */
+/* Note: impossible to select this in Live Preview due to mark being part of cm-html-embed*/
+body.theme-dark.highlightr-floating mark[class*="hltr"]:last-of-type:not(mark[class*="hltr"]:only-of-type) {
+    --floating-background: var(--background-primary);
+    --floating-size: 20%;
+    padding-bottom: 0.1em;
+    border: 1px solid red;
+    background-image: linear-gradient(
+        0,
+        rgba(var(--mono-rgb-0), 0) var(--floating-size),
+        var(--floating-background) var(--floating-size)
+    ) !important
+}
+
+/* Fix: <mark> in live preview should be normal text color */
+body:is(.theme-dark) .markdown-source-view:is(.is-live-preview) mark {
+    color: var(--text-normal);
+}

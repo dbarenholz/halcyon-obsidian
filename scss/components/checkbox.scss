@@ -1,0 +1,12 @@
+/* Checkbox */
+body:is(.theme-dark) {
+	/* --checkbox-radius: already set */
+	/* --checkbox-size: already set */
+	/* --checkbox-marker-color:  already set */
+	--checkbox-color: var(--halcyon-palette-lilac);
+	--checkbox-color-hover: var(--halcyon-palette-lilac-hover);
+	--checkbox-border-color: var(--halcyon-palette-lilac);
+	--checkbox-border-color-hover: var(--halcyon-palette-lilac-hover);
+	/* --checklist-done-decoration: already set */
+	/* --checklist-done-color: already set */
+}

@@ -1,0 +1,7 @@
+/* Make sure difference between on/off is better visible. */
+body:where(.theme-dark) .checkbox-container {
+	background-color: var(--halcyon-palette-salmon);
+}
+body:where(.theme-dark) .checkbox-container.is-enabled {
+	background-color: var(--halcyon-palette-lime);
+}

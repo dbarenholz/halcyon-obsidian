@@ -1,0 +1,8 @@
+/* Blockquote */
+body:where(.theme-dark) {
+	--blockquote-color: color-mix(
+		in srgb,
+		var(--halcyon-palette-yellow) 75%,
+		var(--halcyon-text-normal)
+	);
+}

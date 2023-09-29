@@ -1,0 +1,8 @@
+/* Prompt */
+body:where(.theme-dark) {
+	/* --prompt-width: ; already set */
+	/* --prompt-max-width: ; already set */
+	/* --prompt-max-height: ; already set */
+	/* --prompt-border-width: ; already set */
+	--prompt-border-color: var(--halcyon-base-blue-02-03-mix);
+}

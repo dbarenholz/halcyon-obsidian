@@ -1,0 +1,4 @@
+/* Make normal markdown tables also take full size */
+body:is(.theme-dark) table:not(.table-view-table) {
+	width: 100%;
+}

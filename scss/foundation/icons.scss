@@ -1,0 +1,13 @@
+/* Icons */
+body:where(.theme-dark) {
+	/* --icon-size: ; already set */
+	--icon-stroke: 2px;
+	/* --icon-color: already set */
+	/* --icon-color-hover: already set */
+	--icon-color-active: var(--interactive-accent);
+	--icon-color-focused: var(--interactive-accent);
+	/* --icon-opacity: ; already set */
+	/* --icon-opacity-hover: ; already set */
+	/* --icon-opacity-active: ; already set */
+	--clickable-icon-radius: 0;
+}

@@ -1,0 +1,16 @@
+/* Make search results not yellow */
+body:where(.theme-dark)
+	.search-result:not(.is-collapsed)
+	.search-result-file-title {
+	color: var(--text-normal);
+}
+body:where(.theme-dark)
+	.search-result:not(.is-collapsed)
+	.search-result-file-matched-text {
+	color: var(--text-accent);
+	font-weight: bold;
+}
+/* Make search background not yellow */
+body:where(.theme-dark) .search-input-container > input {
+	background-color: var(--background-primary);
+}

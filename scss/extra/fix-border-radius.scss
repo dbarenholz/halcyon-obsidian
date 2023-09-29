@@ -1,0 +1,6 @@
+/* Fix border radius */
+body:where(.theme-dark) .metadata-property:focus,
+body:where(.theme-dark) .metadata-property:focus-within,
+body:where(.theme-dark) .metadata-properties-heading:focus:before {
+	border-radius: 2px;
+}

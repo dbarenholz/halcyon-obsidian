@@ -1,0 +1,20 @@
+/* Set the active/focused color of inputs to accent color, but NOT on checkboxes */
+body:is(.theme-dark)
+	:is(
+		textarea,
+		input:not([type='checkbox']),
+		input.metadata-input-text,
+		select
+	):is(:focus, :active, :focus-visible),
+body:is(.theme-dark) .metadata-property:is(:focus, :focus-within),
+body:is(.theme-dark) .text-icon-button:focus,
+body:is(.theme-dark) .metadata-properties-heading:focus:before {
+	box-shadow: 0 0 0 1px var(--interactive-accent);
+}
+
+/* Fix: selecting text in input elements */
+body:is(.theme-dark) .metadata-input-longtext::selection,
+body:is(.theme-dark) input::selection,
+body:is(.theme-dark) textarea::selection {
+	background-color: var(--halcyon-base-blue-03-04-mix);
+}

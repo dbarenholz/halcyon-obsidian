@@ -1,0 +1,17 @@
+/* Properties: Extra */
+/* Properties in Source: Make keys blue */
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-atom {
+	color: var(--color-cyan);
+}
+/* Properties in Source: Make semicolon and list dashes orange */
+body:where(.theme-dark) .cm-hmd-frontmatter.cm-meta {
+	color: var(--color-orange);
+}
+/* Properties in Source: Make values green */
+body:where(.theme-dark) .cm-hmd-frontmatter {
+	color: var(--color-green);
+}
+/* Properties: Make icons blue. */
+body:where(.theme-dark) .metadata-property-icon {
+	color: var(--halcyon-palette-cyan);
+}
