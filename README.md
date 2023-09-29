@@ -1,15 +1,6 @@
 # Halcyon for Obsidian
 
-%% TODO: Make an image in photoshop;
-
-Logo - Halcyon [img from help vault note, include graph somewhere]
-Logo - for Obsidian [img from help vault note, include graph somewhere]
-
-%%
-%% [logo](logo.png) %%
-
-%% Placeholder - this is supposed to be a nice looking picture. %%
-%% [Theme Preview](preview.png) %%
+![banner-image](img/halcyon-banner.png)
 
 I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only, but _soon_ very customizable through [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), see [customization](#customization---style-settings).
 
