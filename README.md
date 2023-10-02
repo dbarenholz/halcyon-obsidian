@@ -1,8 +1,8 @@
 # Halcyon for Obsidian
 
-![banner-image](img/halcyon-banner.png)
+![banner-image](img/halcyon-banner-github.png)
 
-I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only, but _soon_ very customizable through [Style Settings](https://github.com/mgmeyers/obsidian-style-settings), see [customization](#customization---style-settings).
+I fell in love with the [Halcyon colour scheme](https://halcyon-theme.netlify.app/), so I decided to port it to my favourite notetaking app, [Obsidian](https://obsidian.md/). Halcyon is dark-mode only.
 
 ## Installation
 
@@ -30,10 +30,6 @@ You can install Halcyon through Obsidian, or manually.
 ## Plugin Support
 
 -   [Chetachi](https://github.com/chetachiezikeuzor)'s [Highlightr](obsidian://show-plugin?id=highlightr-plugin) plugin: when selecting `css-classes` as option, it will by default use the Halcyon colors for its highlights.
-
-## Customization - Style Settings
-
-_Coming very soon to an Obsidian Theme store near you!_
 
 ## Known Issues
 
