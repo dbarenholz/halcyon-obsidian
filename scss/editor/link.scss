@@ -9,7 +9,7 @@ body:where(.theme-dark) {
 	/* --link-unresolved-opacity: ; */
 	/* --link-unresolved-filter: ; */
 	--link-unresolved-decoration-style: dashed;
-	/* --link-unresolved-decoration-color: ; */
+	--link-unresolved-decoration-color: var(--halcyon-palette-lilac);
 	--link-external-color: var(--halcyon-palette-lilac);
 	--link-external-color-hover: var(--halcyon-palette-lilac-hover);
 	/* --link-external-decoration: ; */
