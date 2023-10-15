@@ -54,6 +54,16 @@ This theme would never have seen its conception, if not for the following people
 
 ## Changelog
 
+**Version 0.0.3**:
+
+- Fix inaccurate HSL variables; this was the cause for #4.
+- Fix cascading issues from inaccurate HSL variables.
+
+
+**Version 0.0.2**:
+
+- Fix: Hovering headers in tables that are in a callout. See #3.
+
 **Version 0.0.1**:
 
 -   Github repository has been made public.
