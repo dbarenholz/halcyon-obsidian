@@ -1,11 +1,12 @@
 {
 	"name": "halcyon",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"scripts": {
 		"dev": "sass --no-source-map --watch ./scss/theme.scss ./theme.css",
 		"lint": "prettier ./scss/ --write",
 		"compile": "sass --no-source-map ./scss/theme.scss ./css/theme.min.css -s compressed",
-		"build": "npm run lint; npm run compile; node ./scripts/merge.js"
+		"build": "npm run lint; npm run compile; node ./scripts/merge.js",
+		"version": "node ./scripts/bumpVersion.js"
 	},
 	"devDependencies": {
 		"prettier": "^3.0.3",
