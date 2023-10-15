@@ -64,11 +64,7 @@ body:is(.theme-dark) {
 	);
 	--interactive-hover: var(--background-primary);
 	--interactive-accent: var(--halcyon-accent);
-	--interactive-accent-hsl: hsl(
-		var(--accent-h),
-		var(--accent-s),
-		var(--accent-l)
-	);
+	--interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--interactive-accent-hover: color-mix(
 		in hsl shorter hue,
 		var(--halcyon-accent) 75%,
