@@ -1,6 +1,6 @@
 {
 	"name": "halcyon",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"scripts": {
 		"dev": "sass --no-source-map --watch ./scss/theme.scss ./theme.css",
 		"lint": "prettier ./scss/ --write",
