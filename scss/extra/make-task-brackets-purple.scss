@@ -1,5 +1,5 @@
-/* Lists: Extra */
 /* Task lists: make brackets purple */
-body:where(.theme-dark) .cm-formatting.cm-formatting-task {
+body.theme-dark:not(.dont-make-task-brackets-purple)
+	.cm-formatting.cm-formatting-task {
 	color: var(--halcyon-palette-lilac);
 }

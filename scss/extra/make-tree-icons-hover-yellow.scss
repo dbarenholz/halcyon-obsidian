@@ -1,5 +1,5 @@
 /* give color to tree item icons on hover in link panes */
-body:where(.theme-dark)
+body.theme-dark:not(.dont-make-tree-icons-hover-yellow)
 	:is(.backlinks-pane, .outgoing-link-pane)
 	.tree-item-self:hover
 	.tree-item-icon

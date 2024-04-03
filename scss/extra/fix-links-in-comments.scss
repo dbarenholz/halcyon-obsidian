@@ -1,5 +1,5 @@
 /* Fix: do not color links in comments */
-body:is(.theme-dark)
+body:is(.theme-dark):not(.no-fix-links-in-comments)
 	:is(
 		.cm-comment.cm-hmd-internal-link,
 		.cm-comment.cm-link,
@@ -8,7 +8,7 @@ body:is(.theme-dark)
 	color: var(--code-comment);
 }
 /* Fix: do not underline links on comments */
-body:is(.theme-dark)
+body:is(.theme-dark):not(.no-fix-links-in-comments)
 	:is(
 		.cm-comment.cm-string,
 		.cm-comment.cm-hmd-internal-link:hover,

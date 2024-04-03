@@ -1,19 +1,24 @@
-/* Blockquote: Extra */
 /* Make blockquote small caps, but not in codeblocks. */
-body:is(.theme-dark) .markdown-rendered blockquote,
-body:is(.theme-dark)
+body:is(.theme-dark):not(.dont-make-blockquotes-small-caps)
+	.markdown-rendered
+	blockquote,
+body:is(.theme-dark):not(.dont-make-blockquotes-small-caps)
 	.markdown-source-view:is(.is-live-preview)
 	span.cm-quote:not(.cm-inline-code) {
 	font-variant: small-caps;
 }
-body:is(.theme-dark) .markdown-rendered blockquote :is(pre, code) {
+body:is(.theme-dark):not(.dont-make-blockquotes-small-caps)
+	.markdown-rendered
+	blockquote
+	:is(pre, code) {
 	font-variant: normal;
 }
 /* Fix source/lp: Italics in quotes should have italic color. */
-body:where(.theme-dark) .cm-em.cm-quote {
+body:where(.theme-dark):not(.dont-make-blockquotes-small-caps) .cm-em.cm-quote {
 	color: var(--italic-color);
 }
 /* Fix source/lp: Bolds in quotes should have bold color. */
-body:where(.theme-dark) .cm-strong.cm-quote {
+body:where(.theme-dark):not(.dont-make-blockquotes-small-caps)
+	.cm-strong.cm-quote {
 	color: var(--bold-color);
 }

@@ -1,5 +1,6 @@
-/* Code: Extra */
-/* Set tab-indented codeblocks to orange */
-body:where(.theme-dark) .cm-s-obsidian span.cm-inline-code {
+/* Set tab-indented codeblocks to orange, but not if the user disables the fix */
+body.theme-dark:not(.no-fix-code-highlighting)
+	.cm-s-obsidian
+	span.cm-inline-code {
 	color: var(--halcyon-palette-orange);
 }

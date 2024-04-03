@@ -1,23 +1,23 @@
 /* Vertical border line right of left sidebar */
-body:where(.theme-dark)
+body.theme-dark:not(.no-fix-divider-lines)
 	.workspace-split.mod-left-split
 	> .workspace-leaf-resize-handle {
 	border-right-width: 0px;
 }
 /* Vertical border line left of right sidebar */
-body:where(.theme-dark)
+body.theme-dark:not(.no-fix-divider-lines)
 	.workspace-split.mod-right-split
 	> .workspace-leaf-resize-handle {
 	border-left-width: 0px;
 }
 /* Horizontal border lines between tab groups */
-body:where(.theme-dark)
+body.theme-dark:not(.no-fix-divider-lines)
 	.workspace-split.mod-horizontal
 	> *
 	> .workspace-leaf-resize-handle {
 	border-bottom-width: 0px;
 }
 /* Vertical border line right of ribbon */
-body:where(.theme-dark) .workspace-ribbon {
+body.theme-dark:not(.no-fix-divider-lines) .workspace-ribbon {
 	border-right: unset;
 }

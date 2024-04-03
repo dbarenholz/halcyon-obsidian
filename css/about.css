@@ -1,10 +1,12 @@
-/*  
-    Based on [Halcyon Theme](https://halcyon-theme.netlify.app/)
-    courtesy of [Brittany Chiang](https://brittanychiang.com/)
+/**
+The Obsidian Halcyon theme is based on the Halcyon theme as created by Brittany Chiang.
+See the following links for more information.
+  - https://halcyon-theme.netlify.app/
+  - https://brittanychiang.com/
 
-    Initial port by [sailKite](https://github.com/sailkitev).
-    Further polishing and publishing by [dbarenholz](https://github.com/dbarenholz)
+The initial port to Obsidian is done by sailKite.
+See:
+  - https://github.com/sailkitev
 
-    Some further design decisions were made due to inconsistencies of the theme
-    through Sublime Text and VS Code.
+All further work done by me (dbarenholz). A few design decisions were made out of necessity.
 */

@@ -1,0 +1,3 @@
+[submodule "theme-dev-vault"]
+	path = theme-dev-vault
+	url = git@github.com:obsidian-community/theme-dev-vault.git

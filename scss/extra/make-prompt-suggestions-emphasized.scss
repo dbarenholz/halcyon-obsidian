@@ -1,5 +1,5 @@
 /* make suggestions yellow */
-body:where(.theme-dark)
+body.theme-dark:not(.dont-make-prompt-suggestions-emphasized)
 	.prompt
 	> .prompt-results
 	> .suggestion-item
@@ -7,7 +7,9 @@ body:where(.theme-dark)
 	color: var(--interactive-accent);
 }
 /* make typed text bold, and yellow */
-body:where(.theme-dark) .prompt input.prompt-input {
+body.theme-dark:not(.dont-make-prompt-suggestions-emphasized)
+	.prompt
+	input.prompt-input {
 	color: var(--interactive-accent);
 	font-weight: bold;
 }

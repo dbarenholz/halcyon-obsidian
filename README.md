@@ -40,6 +40,11 @@ There are a few limitations that are outside of my control as theme developer. H
 
 _Did you find more issues? Let me know by making an [issue](https://github.com/dbarenholz/halcyon-obsidian/issues)!_
 
+## Style Settings
+
+As of version `0.0.4` there is now a basic support for style settings.
+This version is still _work in progress_ and unreleased, but the code has been pushed to git.
+
 ## License
 
 This theme is released under the [MIT License](#LICENSE).
@@ -54,6 +59,10 @@ This theme would never have seen its conception, if not for the following people
 
 ## Changelog
 
+**Version 0.0.4** (work in progress):
+
+- Add rudimentary Style Settings support.
+
 **Version 0.0.3**:
 
 - Fix inaccurate HSL variables; this was the cause for [#4](<https://github.com/dbarenholz/halcyon-obsidian/issues/4>).
@@ -66,4 +75,4 @@ This theme would never have seen its conception, if not for the following people
 
 **Version 0.0.1**:
 
--   Github repository has been made public.
+- Github repository has been made public.
