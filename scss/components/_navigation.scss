@@ -1,6 +1,6 @@
 // Navigation
 
-body:is(.theme-dark) {
+.theme-dark body {
   // -nav-item-size: ;
   --nav-item-color: var(--text-muted);
   // --nav-item-color-hover: ;

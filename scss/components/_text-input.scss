@@ -1,7 +1,7 @@
 // Text input
-body:is(.theme-dark) {
+.theme-dark body {
 	// --input-height: ;
-	--input-radius: 0px;
+	--input-radius: 0;
 	// --input-font-weight: ;
 	// --input-border-width: ;
 }

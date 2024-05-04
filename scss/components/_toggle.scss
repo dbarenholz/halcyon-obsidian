@@ -1,8 +1,8 @@
 // Toggle
-body:is(.theme-dark) {
+.theme-dark body {
 	--toggle-border-width: 10px;
-	// --toggle-width: 1px;
-	// --toggle-radius: 0px;
+	--toggle-width: 1px;
+	--toggle-radius: 0px;
 	--toggle-thumb-color: var(--text-on-accent);
 	--toggle-thumb-radius: 0;
 	// --toggle-thumb-height: ;
