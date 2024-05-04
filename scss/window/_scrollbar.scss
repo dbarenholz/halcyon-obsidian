@@ -1,5 +1,5 @@
 // Scrollbar
-body:is(.theme-dark) {
+.theme-dark body {
 	--scrollbar-bg: transparent;
 	// --scrollbar-thumb-bg: transparent;
 	// --scrollbar-active-thumb-bg: green;
