@@ -1,20 +1,12 @@
 // Tags
-body:is(.theme-dark) {
-	--tag-size: var(--code-size);
+.theme-dark body {
+	--tag-background: mix(var(--tag-color), transparent, 25%);
+	--tag-background-hover: mix(var(--tag-color-hover), transparent, 25%);
 	--tag-color: var(--halcyon-palette-cyan);
 	--tag-color-hover: var(--halcyon-palette-cyan);
-	// --tag-decoration:  underline;
 	--tag-decoration-hover: underline;
-	--tag-background: color-mix(
-		in hsl shorter hue,
-		var(--tag-color) 25%,
-		transparent
-	);
-	--tag-background-hover: color-mix(
-		in hsl shorter hue,
-		var(--tag-color-hover) 25%,
-		transparent
-	);
+	--tag-size: var(--code-size);
+	// tag-deoration: underline;
 	// --tag-border-color: ;
 	// --tag-border-color-hover: ;
 	// --tag-border-width: ;

@@ -1,5 +1,8 @@
 // Properties*/
-body:is(.theme-dark) {
+.theme-dark body {
+	--metadata-label-text-color: var(--halcyon-palette-cyan);
+	--metadata-label-text-color-hover: var(--halcyon-palette-cyan-hover);
+	--metadata-input-text-color: var(--halcyon-palette-lime);
 	// --metadata-background: green;
 	// --metadata-display-editing: "";
 	// --metadata-display-reading: ;
@@ -23,11 +26,8 @@ body:is(.theme-dark) {
 	// --metadata-label-font-size: ;
 	// --metadata-label-font-weight: ;
 	// --metadata-sidebar-label-font-size: ;
-	--metadata-label-text-color: var(--halcyon-palette-cyan);
-	--metadata-label-text-color-hover: var(--halcyon-palette-cyan-hover);
 	// --metadata-label-width: ;
 	// --metadata-input-height: ;
-	// --metadata-input-text-color: var(--halcyon-palette-lime);
 	// --metadata-input-font-size: ;
 	// --metadata-sidebar-input-font-size: ;
 	// --metadata-input-background: red;

@@ -1,15 +1,15 @@
 // Table
-body:is(.theme-dark) {
+.theme-dark body {
 	--table-background: var(--background-primary);
+	--table-header-background-hover: var(--table-background);
+	--table-header-size: larger;
 	// --table-border-width: ;
 	// --table-border-color: var(--halcyon-palette-cyan);
 	// --table-white-space: ;
 	// --table-header-background:  var(--background-secondary);
-	--table-header-background-hover: var(--table-background);
 	// --table-header-border-width: ;
 	// --table-header-border-color: ;
 	// --table-header-font: ;
-	--table-header-size: larger;
 	// --table-header-weight: ;
 	// --table-header-color: var(--halcyon-accent);
 	// --table-text-size: ;

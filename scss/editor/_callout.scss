@@ -1,8 +1,8 @@
 // Callout
-body:is(.theme-dark) {
+.theme-dark body {
+	--callout-padding: var(--size-4-3) var(--size-4-6);
 	// --callout-border-width: ;
 	// --callout-border-opacity: ;
-	--callout-padding: var(--size-4-3) var(--size-4-6);
 	// --callout-radius: ;
 	// --callout-blend-mode: multiply;
 	// --callout-title-color: red;
@@ -25,19 +25,20 @@ body:is(.theme-dark) {
 	// --callout-warning	warning, caution, attention
 	// --callout-quote	quote, cite
 }
-// Callout: Extra
-// Fix: Callouts in live preview
-body:is(.theme-dark)
-	.markdown-source-view:is(.is-live-preview)
-	.callout-content
-	> .callout {
-	margin: 1em 0;
-	padding: var(--callout-padding);
-}
-// Fix: codeblocks in callouts in live preview
-body:is(.theme-dark)
-	.markdown-source-view:is(.is-live-preview)
-	.callout-content
-	> pre {
-	margin: 1em 0;
+
+.theme-dark {
+	body {
+		// Fix: Callouts in live preview
+		.markdown-source-view.is-live-preview .callout-content {
+			> .callout {
+			}
+
+			margin: 1em 0;
+			padding: var(--callout-padding);
+		}
+		// Fix: codeblocks in callouts in live preview
+		> pre {
+			margin: 1em 0;
+		}
+	}
 }

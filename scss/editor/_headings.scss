@@ -1,12 +1,18 @@
 // Headings
-body:is(.theme-dark) {
-	// --heading-formatting: ;
+.theme-dark body {
 	--h1-color: var(--halcyon-palette-lime);
 	--h2-color: var(--halcyon-palette-lime);
 	--h3-color: var(--halcyon-palette-lime);
 	--h4-color: var(--halcyon-palette-lime);
 	--h5-color: var(--halcyon-palette-lime);
 	--h6-color: var(--halcyon-palette-lime);
+	--h1-weight: 700;
+	--h2-weight: 675;
+	--h3-weight: 650;
+	--h4-weight: 625;
+	--h5-weight: 600;
+	--h6-weight: 575;
+	// --heading-formatting: ;
 	// --h1-font: ;
 	// --h2-font: ;
 	// --h3-font: ;
@@ -37,10 +43,4 @@ body:is(.theme-dark) {
 	// --h4-variant: ;
 	// --h5-variant: ;
 	// --h6-variant: ;
-	--h1-weight: 700;
-	--h2-weight: 675;
-	--h3-weight: 650;
-	--h4-weight: 625;
-	--h5-weight: 600;
-	--h6-weight: 575;
 }

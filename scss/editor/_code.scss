@@ -1,8 +1,6 @@
 // Code
-body:is(.theme-dark) {
+.theme-dark body {
 	--code-background: var(--halcyon-base-blue-01);
-	// --code-white-space
-	// --code-size
 	--code-normal: var(--halcyon-palette-cyan);
 	--code-comment: var(--text-faint);
 	--code-function: var(--halcyon-code-function);
@@ -14,4 +12,6 @@ body:is(.theme-dark) {
 	--code-string: var(--halcyon-palette-lime);
 	--code-tag: var(--halcyon-base-grey-dark);
 	// --code-value: red;
+	// --code-white-space
+	// --code-size
 }

@@ -1,9 +1,4 @@
 // Horizontal rule
-body:is(.theme-dark) {
-	--hr-color: color-mix(
-			in hsl shorter hue,
-			var(--text-faint),
-			var(--background-modifier-border)
-		)
-		// --hr-thickness: ;;
+.theme-dark body {
+	--hr-color: mix(var(--text-faint), var(--background-modifier-border), 50%);
 }
