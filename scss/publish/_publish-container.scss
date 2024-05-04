@@ -1,0 +1,69 @@
+.published-container {
+  // Page
+  --nav-collapse-icon-color: var(--text-faint);
+  --nav-collapse-icon-color-hover: var(--text-muted);
+  // Page titles
+  --footer-display: block;
+  --sidebar-font-size: 14px;
+  --outline-heading-color: var(--text-muted);
+  --outline-heading-color-active: var(--text-accent);
+  --outline-heading-color-hover: var(--text-normal);
+  --outline-heading-weight-active: var(--font-semibold);
+  --graph-height: 260px;
+  // Component Titles
+  --header-height: 50px;
+  --input-height: 32px;
+  --logo-height: auto;
+  --nav-item-border-color: var(--background-modifier-border);
+  --nav-item-border-color-active: var(--text-muted);
+  --nav-item-border-color-hover: mix(var(--halcyon-accent), transparent, 75%);
+  --nav-item-color-active: var(--halcyon-accent);
+  // Inputs
+  --nav-item-color-hover: mix(var(--halcyon-accent), transparent, 75%);
+  // Graph
+  --nav-item-weight-active: var(--font-medium);
+  // Sidebars
+  --sidebar-left-background: var(--background-primary);
+  --sidebar-left-border-color: var(--background-modifier-border);
+  --sidebar-left-border-width: 1px;
+  --sidebar-left-width: 280px;
+  --logo-max-height: 200px;
+  --logo-max-width: calc(100% - 18px);
+  --site-menu-icon-color: var(--text-faint);
+  --site-menu-icon-color-hover: var(--text-normal);
+  --site-menu-icon-size: 24px;
+  // Site Header
+  --site-name-color: var(--halcyon-accent);
+  --site-name-color-hover: mix(var(--halcyon-accent), transparent, 75%);
+  --site-name-font: inherit;
+  --site-name-size: 22px;
+  --site-name-weight: var(--font-semibold);
+  --nav-parent-item-color: var(--text-normal);
+  --nav-parent-item-color-active: mix(var(--halcyon-accent), transparent, 75%);
+  --nav-parent-item-weight: var(--font-medium);
+  --logo-radius: 8px;
+  --sidebar-right-background: transparent;
+  --sidebar-right-border-color: var(--background-modifier-border);
+  --sidebar-right-border-width: 0px;
+  --sidebar-right-width: 300px;
+  --page-side-padding: 48px;
+  // Navigation
+  --component-title-color: var(--text-normal);
+  --page-title-color: var(--h1-color);
+  --component-title-font: inherit;
+  --page-title-font: var(--h1-font);
+  --page-title-line-height: var(--h1-line-height);
+  --component-title-size: var(--font-ui-small);
+  --page-title-size: 2.6em;
+  --component-title-style: inherit;
+  --page-title-style: var(--h1-style);
+  --component-title-transform: uppercase;
+  --component-title-variant: inherit;
+  // Outline
+  --page-title-variant: var(--h1-variant);
+  --component-title-weight: var(--font-semibold);
+  --page-title-weight: var(--h1-weight);
+  --logo-width: auto;
+  // Footer
+  --page-width: 800px;
+}
