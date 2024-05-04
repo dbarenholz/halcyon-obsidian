@@ -1,6 +1,6 @@
 // File explorer
-body:is(.theme-dark) {
+.theme-dark body {
 	--vault-name-font-size: 1em;
-	// --vault-name-font-weight: ;
 	--vault-name-color: var(--interactive-accent);
+	// --vault-name-font-weight: ;
 }

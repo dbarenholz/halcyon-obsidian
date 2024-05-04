@@ -1,11 +1,11 @@
 // Graph
-body:is(.theme-dark) {
+.theme-dark body {
+	--graph-line: var(--halcyon-base-blue-03);
+	--graph-node-unresolved: var(--halcyon-palette-salmon);
+	--graph-node-tag: var(--halcyon-palette-lilac);
 	// --graph-controls-width: ;
 	// --graph-text: red;
-	--graph-line: var(--halcyon-base-blue-03);
 	// --graph-node: ;
-	--graph-node-unresolved: var(--halcyon-palette-salmon);
 	// --graph-node-focused: ;
-	--graph-node-tag: var(--halcyon-palette-lilac);
 	// --graph-node-attachment: ;
 }
