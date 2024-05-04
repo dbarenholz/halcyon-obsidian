@@ -1,0 +1,13 @@
+// Lists
+body:is(.theme-dark) {
+	// --list-indent: ;
+	// --list-spacing: ;
+	--list-marker-color: var(--halcyon-palette-lilac);
+	--list-marker-color-hover: var(--halcyon-palette-lilac-hover);
+	--list-marker-color-collapsed: var(--halcyon-palette-lime);
+	// --list-bullet-border: ;
+	// --list-bullet-radius: ;
+	// --list-bullet-size: ;
+	// --list-bullet-transform: ;
+	// --list-numbered-style: ;
+}

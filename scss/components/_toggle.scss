@@ -1,0 +1,14 @@
+// Toggle
+body:is(.theme-dark) {
+	--toggle-border-width: 10px;
+	// --toggle-width: 1px;
+	// --toggle-radius: 0px;
+	--toggle-thumb-color: var(--text-on-accent);
+	--toggle-thumb-radius: 0;
+	// --toggle-thumb-height: ;
+	// --toggle-thumb-width: ;
+	// --toggle-s-border-width: ;
+	// --toggle-s-width: ;
+	// --toggle-s-thumb-height: ;
+	// --toggle-s-thumb-width: ;
+}

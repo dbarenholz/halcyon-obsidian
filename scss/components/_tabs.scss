@@ -1,0 +1,22 @@
+// Tabs
+body:is(.theme-dark) {
+	// --tab-background-active:
+	// --tab-text-color:
+	--tab-text-color-active: var(--text-accent);
+	// --tab-text-color-focused:
+	--tab-text-color-focused-active: var(--text-accent);
+	// --tab-text-color-focused-highlighted:
+	--tab-text-color-focused-active-current: var(--text-accent);
+	// --tab-font-size
+	// --tab-font-weight
+	// --tab-container-background: already set;
+	--tab-divider-color: var(--titlebar-background);
+
+	// --tab-outline-color: var(--halcyon-accent);
+	--tab-outline-width: 0px;
+	--tab-curve: 0px;
+	--tab-radius: 0px;
+	--tab-radius-active: 0px;
+	// --tab-width: 100%;
+	// --tab-max-width: ;
+}

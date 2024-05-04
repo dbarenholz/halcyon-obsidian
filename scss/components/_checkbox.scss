@@ -1,0 +1,12 @@
+// Checkbox
+body:is(.theme-dark) {
+	// --checkbox-radius:
+	// --checkbox-size:
+	// --checkbox-marker-color:
+	--checkbox-color: var(--halcyon-palette-lilac);
+	--checkbox-color-hover: var(--halcyon-palette-lilac-hover);
+	--checkbox-border-color: var(--halcyon-palette-lilac);
+	--checkbox-border-color-hover: var(--halcyon-palette-lilac-hover);
+	// --checklist-done-decoration:
+	// --checklist-done-color:
+}

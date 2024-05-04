@@ -1,0 +1,13 @@
+// Icons
+body:is(.theme-dark) {
+	// --icon-size: ;
+	--icon-stroke: 2px;
+	// --icon-color:
+	// --icon-color-hover:
+	--icon-color-active: var(--interactive-accent);
+	--icon-color-focused: var(--interactive-accent);
+	// --icon-opacity: ;
+	// --icon-opacity-hover: ;
+	// --icon-opacity-active: ;
+	--clickable-icon-radius: 0;
+}

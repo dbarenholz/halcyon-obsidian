@@ -1,0 +1,17 @@
+// Link
+body:is(.theme-dark) {
+	--link-color: var(--halcyon-palette-lilac);
+	--link-color-hover: var(--halcyon-palette-lilac-hover);
+	// --link-decoration: ;
+	// --link-decoration-hover: ;
+	// --link-decoration-thickness: ;
+	--link-unresolved-color: var(--halcyon-palette-lilac);
+	// --link-unresolved-opacity: ;
+	// --link-unresolved-filter: ;
+	--link-unresolved-decoration-style: dashed;
+	--link-unresolved-decoration-color: var(--halcyon-palette-lilac);
+	--link-external-color: var(--halcyon-palette-lilac);
+	--link-external-color-hover: var(--halcyon-palette-lilac-hover);
+	// --link-external-decoration: ;
+	// --link-external-decoration-hover: ;
+}

@@ -1,0 +1,36 @@
+// Properties*/
+body:is(.theme-dark) {
+	// --metadata-background: green;
+	// --metadata-display-editing: "";
+	// --metadata-display-reading: ;
+	// --metadata-max-width: unset;
+	// --metadata-padding: ;
+	// --metadata-border-color: red;
+	// --metadata-border-radius: ;
+	// --metadata-border-width: ;
+	// --metadata-gap: ;
+	// --metadata-divider-color: green;
+	// --metadata-divider-color-hover: ;
+	// --metadata-divider-color-focus: ;
+	// --metadata-divider-width: ;
+	// --metadata-property-padding: ;
+	// --metadata-property-radius: ;
+	// --metadata-property-background: ;
+	// --metadata-property-background-hover: ;
+	// --metadata-property-background-active: ;
+	// --metadata-label-background-hover: ;
+	// --metadata-label-background-active: ;
+	// --metadata-label-font-size: ;
+	// --metadata-label-font-weight: ;
+	// --metadata-sidebar-label-font-size: ;
+	--metadata-label-text-color: var(--halcyon-palette-cyan);
+	--metadata-label-text-color-hover: var(--halcyon-palette-cyan-hover);
+	// --metadata-label-width: ;
+	// --metadata-input-height: ;
+	// --metadata-input-text-color: var(--halcyon-palette-lime);
+	// --metadata-input-font-size: ;
+	// --metadata-sidebar-input-font-size: ;
+	// --metadata-input-background: red;
+	// --metadata-input-background-hover: ;
+	// --metadata-input-background-active: ;
+}

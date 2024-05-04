@@ -1,0 +1,18 @@
+// Make search results not yellow
+body.theme-dark:not(.dont-make-search-results-readable)
+	.search-result:not(.is-collapsed)
+	.search-result-file-title {
+	color: var(--text-normal);
+}
+body.theme-dark:not(.dont-make-search-results-readable)
+	.search-result:not(.is-collapsed)
+	.search-result-file-matched-text {
+	color: var(--text-accent);
+	font-weight: bold;
+}
+// Make search background not yellow
+body.theme-dark:not(.dont-make-search-results-readable)
+	.search-input-container
+	> input {
+	background-color: var(--background-primary);
+}

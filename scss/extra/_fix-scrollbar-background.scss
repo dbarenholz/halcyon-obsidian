@@ -1,0 +1,6 @@
+// Scrollbar: Extra / Fix
+body:not(.native-scrollbars):not(.no-fix-scrollbar-background)
+	::-webkit-scrollbar {
+	background-color: var(--scrollbar-bg);
+	width: 7px;
+}

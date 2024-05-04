@@ -1,6 +1,0 @@
-/* Fix: community plugins highlights */
-body.theme-dark:not(.no-fix-community-plugin-highlights)
-	.community-item
-	.suggestion-highlight {
-	color: var(--text-accent);
-}
