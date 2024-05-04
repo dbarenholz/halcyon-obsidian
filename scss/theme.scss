@@ -1,15 +1,15 @@
 // Halcyon Colors
-@import 'halcyon-colors';
+@use 'halcyon-colors';
 
 // Built-in Obsidian variables
-@import '_foundation';
-@import '_components';
-@import '_editor';
-@import '_core-plugins';
-@import '_window';
+@use 'components/index' as *;
+@use 'core-plugins/index' as *;
+@use 'editor/index' as *;
+@use 'foundation/index' as *;
+@use 'window/index' as *;
 
 // Extra styles not accessible through built-in variables
-@import '_extra-additions';
+@use 'extra/index' as *;
 
 // Community plugins
-@import '_plugins';
+@use 'plugins/index' as *;

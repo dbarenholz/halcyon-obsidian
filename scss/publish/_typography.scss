@@ -1,0 +1,25 @@
+// Em
+
+em {
+  font-style: italic;
+  a{
+    &.internal-link,
+    &.internal-link.is-unresolved{
+      color: var(--halcyon-palette-cyan);
+    }
+  }
+}
+
+// Strong and Em
+
+strong {
+  em {
+    a {
+      &.external-link,
+      &.internal-link,
+      &.internal-link.is-unresolved {
+        color: var(--halcyon-palette-orange);
+      }
+    }
+  }
+}

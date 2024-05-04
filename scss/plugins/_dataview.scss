@@ -1,0 +1,20 @@
+//
+//  github: https://github.com/blacksmithgu/obsidian-dataview
+//  id: dataview
+//  support added on: 29/09/2023
+//
+
+//
+//  - This plugin enables many "generated" views for your note metadata.
+//  - One of those are tables, which by default have no border.
+//
+
+// Dataview Tables: give me my borders back
+.theme-dark {
+	body {
+		.table-view-table > thead > tr > th,
+		.table-view-table > tbody > tr > td {
+			border: 1px solid var(--table-header-border-color);
+		}
+	}
+}

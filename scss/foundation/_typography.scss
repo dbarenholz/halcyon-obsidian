@@ -1,0 +1,5 @@
+// Typography
+body:is(.theme-dark) {
+	--bold-color: var(--halcyon-palette-salmon);
+	--italic-color: var(--halcyon-palette-salmon);
+}

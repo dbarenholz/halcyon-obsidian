@@ -1,0 +1,4 @@
+// Horizontal rule
+.theme-dark body {
+	--hr-color: mix(var(--text-faint), var(--background-modifier-border), 50%);
+}

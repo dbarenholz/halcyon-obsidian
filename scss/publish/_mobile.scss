@@ -1,0 +1,15 @@
+@media screen and (max-width: 750px) {
+  body {
+    --popover-display: none;
+    --input-height: 36px;
+  }
+  .published-container {
+    --header-background: var(--background-primary);
+    --footer-display: none;
+    --header-height: 50px;
+    --site-name-size: 18px;
+    --page-side-padding: 24px;
+    --list-spacing: 0.15em;
+    --page-title-size: 2em;
+  }
+}

@@ -1,0 +1,16 @@
+// Fix border radius, but not if the user disables the fix
+$borderRadius: 2px;
+
+// Apply border radius to focus states
+.theme-dark:not(.no-fix-border-radius) {
+	body {
+		.metadata-property:focus,
+		.metadata-property:focus-within {
+			border-radius: $borderRadius;
+		}
+
+		.metadata-properties-heading:focus:before {
+			border-radius: $borderRadius;
+		}
+	}
+}
