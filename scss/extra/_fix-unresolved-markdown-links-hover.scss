@@ -1,4 +1,4 @@
-// Fix: User experience: for using plain markdown links to something that doesn't exist (by sailKite).*/
+// Fix: User experience: for using plain markdown links to something that doesn't exist (by sailKite).
 body:is(.theme-dark):not(.no-fix-unresolved-markdown-links-hover)
 	h3[data-heading*='find section #']
 	a.tag {
