@@ -16,3 +16,6 @@ node_modules
 
 # PSD files used to create images for readme
 *.psd
+
+# Ignore Obsidian
+.obsidian
