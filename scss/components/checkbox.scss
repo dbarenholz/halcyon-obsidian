@@ -1,12 +1,34 @@
 /* Checkbox */
 body:is(.theme-dark) {
-	/* --checkbox-radius: already set */
 	/* --checkbox-size: already set */
 	/* --checkbox-marker-color:  already set */
 	--checkbox-color: var(--halcyon-palette-lilac);
 	--checkbox-color-hover: var(--halcyon-palette-lilac-hover);
 	--checkbox-border-color: var(--halcyon-palette-lilac);
 	--checkbox-border-color-hover: var(--halcyon-palette-lilac-hover);
+	--checkbox-radius: 5px;
 	/* --checklist-done-decoration: already set */
 	/* --checklist-done-color: already set */
+	input[data-task='/']:checked,
+	li[data-task='/'] > input:checked,
+	li[data-task='/'] > p > input:checked {
+		background-image: none;
+		background-color: rgba(0, 0, 0, 0);
+		position: relative;
+		overflow: hidden;
+	}
+
+	input[data-task='/']:checked:after,
+	li[data-task='/'] > input:checked:after,
+	li[data-task='/'] > p > input:checked:after {
+		top: 0;
+		left: 0;
+		content: ' ';
+		display: block;
+		position: absolute;
+		background-color: var(--halcyon-palette-lilac);
+		width: calc(50% - 0.5px);
+		height: 100%;
+		-webkit-mask-image: none;
+	}
 }
