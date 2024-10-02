@@ -1,10 +1,11 @@
 /* File */
-body:where(.theme-dark) {
+body:is(.theme-dark) {
 	--file-line-width: 50rem;
-	/* --file-folding-offset: ; */
-	/* --file-margins: ; */
-	/* --file-header-font-size: ; */
-	/* --file-header-font-weight: ; */
-	/* --file-header-border: ; */
-	/* --file-header-justify: ; */
+	//--file-folding-offset: 24px;
+	//--file-margins: var(--size-4-8);
+	//--file-header-font: var(--font-interface);
+	//--file-header-font-size: var(--font-ui-small);
+	//--file-header-font-weight: 400;
+	//--file-header-border: var(--border-width) solid transparent;
+	//--file-header-justify: center;
 }

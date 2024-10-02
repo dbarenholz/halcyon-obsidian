@@ -1,8 +1,12 @@
 /* Code */
-body:where(.theme-dark) {
+body:is(.theme-dark) {
+	//--code-white-space: pre-wrap;
+	//--code-radius: var(--radius-s);
+	//--code-size: var(--font-smaller);
 	--code-background: var(--halcyon-base-blue-01);
-	/* --code-white-space */
-	/* --code-size */
+
+
+	// Syntax Highlighting
 	--code-normal: var(--halcyon-palette-cyan);
 	--code-comment: var(--text-faint);
 	--code-function: var(--halcyon-code-function);
@@ -13,5 +17,5 @@ body:where(.theme-dark) {
 	--code-punctuation: var(--halcyon-palette-lilac);
 	--code-string: var(--halcyon-palette-lime);
 	--code-tag: var(--halcyon-base-grey-dark);
-	/* --code-value: red; */
+	// --code-value: var(--color-purple);
 }

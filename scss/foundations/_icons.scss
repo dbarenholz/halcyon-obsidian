@@ -1,13 +1,24 @@
 /* Icons */
-body:where(.theme-dark) {
-	/* --icon-size: ; already set */
+body:is(.theme-dark) {
+	//--icon-size: var(--icon-m);
 	--icon-stroke: 2px;
-	/* --icon-color: already set */
-	/* --icon-color-hover: already set */
+	//--icon-color: var(--text-muted);
+	//--icon-color-hover: var(--text-muted);
 	--icon-color-active: var(--interactive-accent);
 	--icon-color-focused: var(--interactive-accent);
-	/* --icon-opacity: ; already set */
-	/* --icon-opacity-hover: ; already set */
-	/* --icon-opacity-active: ; already set */
+	//--icon-opacity: 0.85;
+	//--icon-opacity-hover: 1;
+	//--icon-opacity-active: 1;
 	--clickable-icon-radius: 0;
+
+	//--icon-xs: 14px;
+	//--icon-s: 16px;
+	//--icon-m: 18px;
+	//--icon-l: 18px;
+	//--icon-xl: 32px;
+	//--icon-xs-stroke-width: 2px;
+	//--icon-s-stroke-width: 2px;
+	//--icon-m-stroke-width: 1.75px;
+	//--icon-l-stroke-width: 1.75px;
+	//--icon-xl-stroke-width: 1.25px;
 }

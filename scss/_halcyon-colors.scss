@@ -3,6 +3,7 @@ body.theme-dark {
 	--halcyon-base-blue-01: #171c28; /* Workbench Background */
 	--halcyon-base-blue-02: #1d2433; /* Editor Background*/
 	--halcyon-base-blue-03: #2f3b54; /* Highlight, widgets, panel*/
+	--halcyon-base-blue-03-rgb: 47, 59, 84; /* Highlight, widgets, panel*/
 	--halcyon-base-blue-04: #6679a4; /* Dividers, subtle UI elements */
 	--halcyon-base-blue-05: #8695b7; /* Status bar text, buttons, etc. */
 	--halcyon-base-grey-dark: #a2aabc; /* Variables, property names, tabs */
@@ -62,12 +63,12 @@ body.theme-dark {
 	--halcyon-accent-hover: var(--halcyon-palette-yellow);
 
 	--halcyon-palette-lilac-hover: color-mix(
-		in hsl shorter hue,
+		in hsl,
 		var(--halcyon-palette-lilac),
 		var(--halcyon-base-grey-dark)
 	);
 	--halcyon-palette-cyan-hover: color-mix(
-		in hsl shorter hue,
+		in hsl,
 		var(--halcyon-palette-cyan),
 		var(--halcyon-base-grey-dark)
 	);

@@ -1,6 +1,6 @@
 .is-mobile.theme-dark:not(.no-fix-mobile-tag-background) {
 	--tag-background: color-mix(
-		in hsl shorter hue,
+		in hsl,
 		var(--tag-color) 25%,
 		transparent
 	);

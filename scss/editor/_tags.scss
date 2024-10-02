@@ -1,25 +1,25 @@
 /* Tags */
-body:where(.theme-dark) {
+body:is(.theme-dark) {
 	--tag-size: var(--code-size);
 	--tag-color: var(--halcyon-palette-cyan);
 	--tag-color-hover: var(--halcyon-palette-cyan);
-	/* --tag-decoration:  underline; */
+	//--tag-decoration: none;
 	--tag-decoration-hover: underline;
 	--tag-background: color-mix(
-		in hsl shorter hue,
-		var(--tag-color) 25%,
-		transparent
+									in hsl,
+									var(--tag-color) 25%,
+									transparent
 	);
 	--tag-background-hover: color-mix(
-		in hsl shorter hue,
-		var(--tag-color-hover) 25%,
-		transparent
+									in hsl,
+									var(--tag-color-hover) 25%,
+									transparent
 	);
-	/* --tag-border-color: ; */
-	/* --tag-border-color-hover: ; */
-	/* --tag-border-width: ; */
-	/* --tag-padding-x: 8px; */
-	/* --tag-padding-y: 1px; */
-	/* --tag-radius: 8px; */
-	/* --tag-weight: 450; */
+	//--tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
+	//--tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
+	//--tag-border-width: 0px;
+	//--tag-padding-x: 0.65em;
+	//--tag-padding-y: 0.25em;
+	//--tag-radius: 2em;
+	//--tag-weight: inherit;
 }

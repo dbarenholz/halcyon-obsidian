@@ -1,11 +1,11 @@
 /* Graph */
-body:where(.theme-dark) {
-	/* --graph-controls-width: ; */
-	/* --graph-text: red; */
+body:is(.theme-dark) {
+	//--graph-controls-width: 240px;
+	//--graph-text: var(--text-normal);
 	--graph-line: var(--halcyon-base-blue-03);
-	/* --graph-node: ; */
+	//--graph-node: var(--text-muted);
 	--graph-node-unresolved: var(--halcyon-palette-salmon);
-	/* --graph-node-focused: ; */
+	//--graph-node-focused: var(--text-accent);
 	--graph-node-tag: var(--halcyon-palette-lilac);
-	/* --graph-node-attachment: ; */
+	//--graph-node-attachment: var(--color-yellow);
 }

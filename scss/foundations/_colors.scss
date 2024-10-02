@@ -1,6 +1,6 @@
 /* Colors */
 body:is(.theme-dark) {
-	/* The 12 base colors is a neutral color palette ranging from dark to light (darkmode). */
+	//The 12 base colors is a neutral color palette ranging from dark to light (darkmode).
 	--color-base-00: var(--halcyon-base-blue-01);
 	--color-base-05: var(--halcyon-base-blue-01-02-mix);
 	--color-base-10: var(--halcyon-base-blue-02);
@@ -14,12 +14,12 @@ body:is(.theme-dark) {
 	--color-base-70: var(--halcyon-base-grey-mix);
 	--color-base-100: var(--halcyon-base-grey-light);
 
-	/* The accent color is used to draw attention to interactive elements, such as links and primary buttons, and can be overridden by the user under Settings → Appearance in the Obsidian app. */
+	//The accent color is used to draw attention to interactive elements, such as links and primary buttons, and can be overridden by the user under Settings → Appearance in the Obsidian app.
 	--accent-h: var(--halcyon-accent-h);
 	--accent-s: var(--halcyon-accent-s);
 	--accent-l: var(--halcyon-accent-l);
 
-	/* Extended color variables define the broader range of colors used for status messages (errors, warnings, success), callouts, syntax highlighting, graph nodes, and Canvas elements */
+	//Extended color variables define the broader range of colors used for status messages (errors, warnings, success), callouts, syntax highlighting, graph nodes, and Canvas elements
 	--color-red: var(--halcyon-palette-salmon);
 	--color-red-rgb: 239, 107, 115;
 	--color-orange: var(--halcyon-palette-orange);
@@ -37,59 +37,64 @@ body:is(.theme-dark) {
 	--color-pink: var(--halcyon-palette-pink);
 	--color-pink-rgb: 249, 207, 242;
 
-	/* Semantic colors are derived from the base color palette based on their intended use. */
+	//Semantic colors are derived from the base color palette based on their intended use.
+
 	--background-primary: var(--halcyon-base-blue-02);
 	--background-primary-alt: var(--halcyon-base-blue-03);
 	--background-secondary: var(--halcyon-base-blue-01);
-	--background-secondary-alt: var(--halcyon-base-blue-02);
+
 
 	--background-modifier-hover: var(--halcyon-base-blue-03);
 	--background-modifier-active-hover: var(--halcyon-base-blue-03);
 	--background-modifier-border: var(--halcyon-base-blue-02-03-mix);
 	--background-modifier-border-hover: var(--halcyon-accent);
 	--background-modifier-border-focus: var(--halcyon-base-blue-04);
-	/* --background-modifier-error-rgb: ; already set by base theme nicely */
-	/* --background-modifier-error: ; already set by base theme nicely */
-	/* --background-modifier-error-hover: ; already set by base theme nicely */
-	/* --background-modifier-success-rgb: ; already set by base theme nicely */
-	/* --background-modifier-success: green; already set by base theme nicely */
+	//--background-modifier-error-rgb: var(--color-red-rgb);
+	//--background-modifier-error: var(--color-red);
+	//--background-modifier-error-hover: var(--color-red);
+	//--background-modifier-success-rgb: var(--color-green-rgb);
+	//--background-modifier-success: var(--color-green);
 	--background-modifier-message: var(--halcyon-base-blue-02-03-mix);
-	/* --background-modifier-form-field:   var(--halcyon-base-blue-02); */
+
+	//	--background-modifier-form-field: var(--color-base-00); Suggested var(--halcyon-base-blue-02);
+
 
 	/* Interactive Colors  */
 	--interactive-normal: color-mix(
-		in hsl shorter hue,
-		var(--background-primary) 75%,
-		transparent
+									in hsl,
+									var(--background-primary) 75%,
+									transparent
 	);
 	--interactive-hover: var(--background-primary);
 	--interactive-accent: var(--halcyon-accent);
 	--interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--interactive-accent-hover: color-mix(
-		in hsl shorter hue,
-		var(--halcyon-accent) 75%,
-		transparent
+									in hsl,
+									var(--halcyon-accent) 75%,
+									transparent
 	);
+
 
 	/* Text Colors */
 	--text-normal: var(--halcyon-text-normal);
 	--text-muted: color-mix(
-		in hsl,
-		var(--halcyon-text-muted),
-		var(--text-normal)
+									in hsl,
+									var(--halcyon-text-muted),
+									var(--text-normal)
 	);
 	--text-faint: var(--halcyon-text-muted);
 	--text-on-accent: var(--halcyon-base-blue-03);
-	/* --text-on-accent-inverted: ; /* only used in canvas, default is fine */
+	//--text-on-accent-inverted: black;
 	--text-error: var(--halcyon-palette-salmon);
 	--text-warning: var(--halcyon-palette-salmon);
 	--text-success: var(--halcyon-palette-lime);
 	--text-accent: var(--halcyon-accent);
 	--text-accent-hover: var(--halcyon-accent-hover);
 	--text-selection: color-mix(
-		in hsl shorter hue,
-		var(--halcyon-base-blue-03-04-mix) 35%,
-		transparent
+									in hsl,
+									var(--halcyon-base-blue-03-04-mix) 35%,
+									transparent
 	);
-	--text-highlight-bg: var(--halcyon-base-blue-03);
+	--text-highlight-bg-rgb: 255, 208, 0;
+	--text-highlight-bg: rgb(var(--halcyon-base-blue-03-rgb));
 }

@@ -1,5 +1,6 @@
 // Fixes -- changes that are part of the theme; should probably not be disabled
 @use 'extra/fix-border-radius';
+@use 'extra/fix-callout-in-live-preview';
 @use 'extra/fix-code-highlighting';
 @use 'extra/fix-community-plugin-highlights';
 @use 'extra/fix-divider-lines';
@@ -12,7 +13,7 @@
 @use 'extra/fix-underline-offset';
 @use 'extra/fix-mobile-tag-background';
 
-// Makes - changes to obsidian thhat the user may disable
+// Makes - changes to obsidian hat the user may disable
 @use 'extra/make-blockquotes-small-caps';
 @use 'extra/make-file-explorer-hover-yellow';
 @use 'extra/make-prompt-suggestions-emphasized';

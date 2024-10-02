@@ -11,10 +11,10 @@
 */
 
 // Dynamic Highlights (by sailKite)
-body:where(.theme-dark) .modal .cm-gutters {
+body:is(.theme-dark) .modal .cm-gutters {
 	color: var(--halcyon-accent);
 }
-body:where(.theme-dark) .modal .cm-line {
+body:is(.theme-dark) .modal .cm-line {
 	color: var(--text-normal);
 
 	& .ͼi {

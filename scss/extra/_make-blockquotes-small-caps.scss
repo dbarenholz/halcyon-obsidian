@@ -14,11 +14,11 @@ body:is(.theme-dark):not(.dont-make-blockquotes-small-caps)
 	font-variant: normal;
 }
 /* Fix source/lp: Italics in quotes should have italic color. */
-body:where(.theme-dark):not(.dont-make-blockquotes-small-caps) .cm-em.cm-quote {
+body:is(.theme-dark):not(.dont-make-blockquotes-small-caps) .cm-em.cm-quote {
 	color: var(--italic-color);
 }
 /* Fix source/lp: Bolds in quotes should have bold color. */
-body:where(.theme-dark):not(.dont-make-blockquotes-small-caps)
+body:is(.theme-dark):not(.dont-make-blockquotes-small-caps)
 	.cm-strong.cm-quote {
 	color: var(--bold-color);
 }

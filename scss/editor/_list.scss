@@ -1,0 +1,16 @@
+/* Lists */
+body:is(.theme-dark) {
+	//--list-indent: 2.25em;
+	//--list-indent-editing: 0.75em;
+	//--list-indent-source: 0;
+	//--list-spacing: 0.075em;
+	--list-marker-color: var(--halcyon-palette-lilac);
+	--list-marker-color-hover: var(--halcyon-palette-lilac-hover);
+	--list-marker-color-collapsed: var(--halcyon-palette-lime);
+	//--list-bullet-border: none;
+	//--list-bullet-radius: 50%;
+	//--list-bullet-size: 0.3em;
+	//--list-bullet-transform: none;
+	//--list-numbered-style: decimal;
+	//--list-bullet-end-padding: 1.3rem;
+}

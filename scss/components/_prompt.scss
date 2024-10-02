@@ -1,8 +1,9 @@
 /* Prompt */
-body:where(.theme-dark) {
-	/* --prompt-width: ; already set */
-	/* --prompt-max-width: ; already set */
-	/* --prompt-max-height: ; already set */
-	/* --prompt-border-width: ; already set */
+body:is(.theme-dark) {
+	//--prompt-input-height: 40px;
+	//--prompt-width: 700px;
+	//--prompt-max-width: 80vw;
+	//--prompt-max-height: 70vh;
+	//--prompt-border-width: var(--border-width);
 	--prompt-border-color: var(--halcyon-base-blue-02-03-mix);
 }

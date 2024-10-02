@@ -1,8 +1,12 @@
 /* Blockquote */
-body:where(.theme-dark) {
+body:is(.theme-dark) {
+	//--blockquote-border-thickness: 2px;
+	//--blockquote-border-color: var(--interactive-accent);
+	//--blockquote-font-style: normal;
 	--blockquote-color: color-mix(
-		in srgb,
-		var(--halcyon-palette-yellow) 75%,
-		var(--halcyon-text-normal)
+									in srgb,
+									var(--halcyon-palette-yellow) 75%,
+									var(--halcyon-text-normal)
 	);
+	//--blockquote-background-color: transparent;
 }
