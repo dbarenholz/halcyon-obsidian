@@ -1,23 +1,23 @@
 // Fixes -- changes that are part of the theme; should probably not be disabled
-@import 'extra/fix-border-radius';
-@import 'extra/fix-code-highlighting';
-@import 'extra/fix-community-plugin-highlights';
-@import 'extra/fix-divider-lines';
-@import 'extra/fix-links-in-comments';
-@import 'extra/fix-properties-highlighting';
-@import 'extra/fix-scrollbar-background';
-@import 'extra/fix-text-input-selection';
-@import 'extra/fix-toggle-readability';
-@import 'extra/fix-unresolved-markdown-links-hover';
-@import 'extra/fix-underline-offset.scss';
-@import 'extra/fix-mobile-tag-background.scss';
+@use 'extra/fix-border-radius';
+@use 'extra/fix-code-highlighting';
+@use 'extra/fix-community-plugin-highlights';
+@use 'extra/fix-divider-lines';
+@use 'extra/fix-links-in-comments';
+@use 'extra/fix-properties-highlighting';
+@use 'extra/fix-scrollbar-background';
+@use 'extra/fix-text-input-selection';
+@use 'extra/fix-toggle-readability';
+@use 'extra/fix-unresolved-markdown-links-hover';
+@use 'extra/fix-underline-offset.scss';
+@use 'extra/fix-mobile-tag-background.scss';
 
 // Makes - changes to obsidian thhat the user may disable
-@import 'extra/make-blockquotes-small-caps';
-@import 'extra/make-file-explorer-hover-yellow';
-@import 'extra/make-prompt-suggestions-emphasized';
-@import 'extra/make-search-results-readable';
-@import 'extra/make-tables-take-full-width';
-@import 'extra/make-tabs-square';
-@import 'extra/make-task-brackets-purple';
-@import 'extra/make-tree-icons-hover-yellow';
+@use 'extra/make-blockquotes-small-caps';
+@use 'extra/make-file-explorer-hover-yellow';
+@use 'extra/make-prompt-suggestions-emphasized';
+@use 'extra/make-search-results-readable';
+@use 'extra/make-tables-take-full-width';
+@use 'extra/make-tabs-square';
+@use 'extra/make-task-brackets-purple';
+@use 'extra/make-tree-icons-hover-yellow';
