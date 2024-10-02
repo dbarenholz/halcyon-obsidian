@@ -9,8 +9,8 @@
 @use 'extra/fix-text-input-selection';
 @use 'extra/fix-toggle-readability';
 @use 'extra/fix-unresolved-markdown-links-hover';
-@use 'extra/fix-underline-offset.scss';
-@use 'extra/fix-mobile-tag-background.scss';
+@use 'extra/fix-underline-offset';
+@use 'extra/fix-mobile-tag-background';
 
 // Makes - changes to obsidian thhat the user may disable
 @use 'extra/make-blockquotes-small-caps';
