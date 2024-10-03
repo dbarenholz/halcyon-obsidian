@@ -1,0 +1,9 @@
+/* File explorer */
+body:is(.theme-dark) {
+	//--vault-profile-display: flex;
+	//--vault-profile-actions-display: flex;
+	--vault-profile-font-size: 1em;
+	//--vault-profile-font-weight: var(--font-medium);
+	//--vault-profile-color: var(--interactive-accent);
+	--vault-profile-color-hover: var(--vault-profile-color);
+}

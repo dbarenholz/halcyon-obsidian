@@ -1,0 +1,10 @@
+/* Window frame */
+body:is(.theme-dark) {
+	--titlebar-background: var(--background-secondary);
+	--titlebar-background-focused: var(--background-secondary);
+	//--titlebar-border-width: 0px;
+	--titlebar-border-color: var(--background-modifier-border);
+	--titlebar-text-color: var(--text-muted);
+	--titlebar-text-color-focused: var(--text-normal);
+	//--titlebar-text-weight: var(--font-bold);
+}

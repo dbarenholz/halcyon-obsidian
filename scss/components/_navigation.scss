@@ -1,0 +1,33 @@
+/* Navigation */
+body:is(.theme-dark) {
+	/* Navigation */
+	//--nav-item-size: var(--font-ui-small);
+	// --nav-item-color: var(--text-muted);
+	//--nav-item-color-hover: var(--text-normal);
+	// --nav-item-color-active: var(--interactive-accent);
+	--nav-item-color-selected: var(--halcyon-palette-orange);
+	//--nav-item-color-highlighted: var(--text-accent);
+	//--nav-item-background-hover: var(--background-modifier-hover);
+	//--nav-item-background-active: var(--background-modifier-hover);
+	--nav-item-background-selected: var(--halcyon-base-blue-03);
+	//--nav-item-padding: var(--size-4-1) var(--size-4-2) var(--size-4-1) var(--size-4-6);
+	//--nav-item-parent-padding: var(--nav-item-padding);
+	//--nav-item-children-padding-start: var(--size-2-2);
+	//--nav-item-children-margin-start: var(--size-4-3);
+	//--nav-item-weight: inherit;
+	//--nav-item-weight-hover: inherit;
+	//--nav-item-weight-active: inherit;
+	//--nav-item-white-space: pre;
+	//--nav-indentation-guide-width: var(--indentation-guide-width);
+	//--nav-indentation-guide-color: var(--indentation-guide-color);
+	//--nav-collapse-icon-color: var(--collapse-icon-color);
+	//--nav-collapse-icon-color-collapsed: var(--text-faint);
+
+	// /* Navigation Headings */
+	//--nav-heading-color: var(--text-normal);
+	//--nav-heading-color-hover: var(--text-normal);
+	//--nav-heading-color-collapsed: var(--text-faint);
+	//--nav-heading-color-collapsed-hover: var(--text-muted);
+	//--nav-heading-weight: var(--font-medium);
+	//--nav-heading-weight-hover: var(--font-medium);
+}

@@ -1,0 +1,100 @@
+/* Colors */
+body:is(.theme-dark) {
+	//The 12 base colors is a neutral color palette ranging from dark to light (darkmode).
+	--color-base-00: var(--halcyon-base-blue-01);
+	--color-base-05: var(--halcyon-base-blue-01-02-mix);
+	--color-base-10: var(--halcyon-base-blue-02);
+	--color-base-20: var(--halcyon-base-blue-02-03-mix);
+	--color-base-25: var(--halcyon-base-blue-03);
+	--color-base-30: var(--halcyon-base-blue-03-04-mix);
+	--color-base-35: var(--halcyon-base-blue-04);
+	--color-base-40: var(--halcyon-base-blue-04-05-mix);
+	--color-base-50: var(--halcyon-base-blue-05);
+	--color-base-60: var(--halcyon-base-grey-dark);
+	--color-base-70: var(--halcyon-base-grey-mix);
+	--color-base-100: var(--halcyon-base-grey-light);
+
+	//The accent color is used to draw attention to interactive elements, such as links and primary buttons, and can be overridden by the user under Settings → Appearance in the Obsidian app.
+	--accent-h: var(--halcyon-accent-h);
+	--accent-s: var(--halcyon-accent-s);
+	--accent-l: var(--halcyon-accent-l);
+
+	//Extended color variables define the broader range of colors used for status messages (errors, warnings, success), callouts, syntax highlighting, graph nodes, and Canvas elements
+	--color-red: var(--halcyon-palette-salmon);
+	--color-red-rgb: 239, 107, 115;
+	--color-orange: var(--halcyon-palette-orange);
+	--color-orange-rgb: 255, 174, 87;
+	--color-yellow: var(--halcyon-palette-yellow);
+	--color-yellow-rgb: 255, 204, 102;
+	--color-green: var(--halcyon-palette-lime);
+	--color-green-rgb: 186, 230, 126;
+	--color-cyan: var(--halcyon-palette-cyan);
+	--color-cyan-rgb: 92, 207, 230;
+	--color-blue: var(--halcyon-palette-blue);
+	--color-blue-rgb: 112, 153, 219;
+	--color-purple: var(--halcyon-palette-lilac);
+	--color-purple-rgb: 195, 166, 255;
+	--color-pink: var(--halcyon-palette-pink);
+	--color-pink-rgb: 249, 207, 242;
+
+	//Semantic colors are derived from the base color palette based on their intended use.
+
+	--background-primary: var(--halcyon-base-blue-02);
+	--background-primary-alt: var(--halcyon-base-blue-03);
+	--background-secondary: var(--halcyon-base-blue-01);
+
+
+	--background-modifier-hover: var(--halcyon-base-blue-03);
+	--background-modifier-active-hover: var(--halcyon-base-blue-03);
+	--background-modifier-border: var(--halcyon-base-blue-02-03-mix);
+	--background-modifier-border-hover: var(--halcyon-accent);
+	--background-modifier-border-focus: var(--halcyon-base-blue-04);
+	//--background-modifier-error-rgb: var(--color-red-rgb);
+	//--background-modifier-error: var(--color-red);
+	//--background-modifier-error-hover: var(--color-red);
+	//--background-modifier-success-rgb: var(--color-green-rgb);
+	//--background-modifier-success: var(--color-green);
+	--background-modifier-message: var(--halcyon-base-blue-02-03-mix);
+
+	//	--background-modifier-form-field: var(--color-base-00); Suggested var(--halcyon-base-blue-02);
+
+
+	/* Interactive Colors  */
+	--interactive-normal: color-mix(
+									in hsl,
+									var(--background-primary) 75%,
+									transparent
+	);
+	--interactive-hover: var(--background-primary);
+	--interactive-accent: var(--halcyon-accent);
+	--interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+	--interactive-accent-hover: color-mix(
+									in hsl,
+									var(--halcyon-accent) 75%,
+									transparent
+	);
+
+
+	/* Text Colors */
+	--text-normal: var(--halcyon-text-normal);
+	--text-muted: color-mix(
+									in hsl,
+									var(--halcyon-text-muted),
+									var(--text-normal)
+	);
+	--text-faint: var(--halcyon-text-muted);
+	--text-on-accent: var(--halcyon-base-blue-03);
+	//--text-on-accent-inverted: black;
+	--text-error: var(--halcyon-palette-salmon);
+	--text-warning: var(--halcyon-palette-salmon);
+	--text-success: var(--halcyon-palette-lime);
+	--text-accent: var(--halcyon-accent);
+	--text-accent-hover: var(--halcyon-accent-hover);
+	--text-selection: color-mix(
+									in hsl,
+									var(--halcyon-base-blue-03-04-mix) 35%,
+									transparent
+	);
+	--text-highlight-bg-rgb: 255, 208, 0;
+	--text-highlight-bg: rgb(var(--halcyon-base-blue-03-rgb));
+}

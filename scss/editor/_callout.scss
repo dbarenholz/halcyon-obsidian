@@ -1,0 +1,30 @@
+/* Callout */
+body:is(.theme-dark) {
+	//--callout-border-width: 0px;
+	//--callout-border-opacity: 0.25;
+	--callout-padding: var(--size-4-3) var(--size-4-6);
+	//--callout-radius: var(--radius-s);
+	//--callout-blend-mode: var(--highlight-mix-blend-mode);
+	//--callout-title-color: inherit;
+	//--callout-title-padding: 0;
+	//--callout-title-size: inherit;
+	//--callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
+	//--callout-content-padding: 0;
+	//--callout-content-background: transparent;
+
+
+	//--callout-bug: var(--color-red-rgb);
+	//--callout-default: var(--color-blue-rgb);
+	//--callout-error: var(--color-red-rgb);
+	//--callout-example: var(--color-purple-rgb);
+	//--callout-fail: var(--color-red-rgb);
+	//--callout-important: var(--color-cyan-rgb);
+	//--callout-info: var(--color-blue-rgb);
+	//--callout-question: var(--color-orange-rgb);
+	//--callout-success: var(--color-green-rgb);
+	//--callout-summary: var(--color-cyan-rgb);
+	//--callout-tip: var(--color-cyan-rgb);
+	//--callout-todo: var(--color-blue-rgb);
+	//--callout-warning: var(--color-orange-rgb);
+	//--callout-quote: 158, 158, 158;
+}

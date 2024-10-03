@@ -1,0 +1,37 @@
+// Grab what I need from the core app.
+// Components
+@use 'components/checkbox' as *;
+@use 'components/navigation' as *;
+
+// Core
+@use 'core-plugins/graph' as *;
+// Editor
+@use 'editor/index' as *;
+
+// Foundations
+@use 'foundations/borders' as *;
+@use 'foundations/colors' as *;
+@use 'foundations/radiuses' as *;
+@use 'foundations/typography' as *;
+
+// Halcyon Colors
+@use 'halcyon-colors' as *;
+
+// Grab what I need from Publish index
+@use 'publish/index' as *;
+
+// Anything else?
+
+.published-container .markdown-rendered h1,
+.published-container .markdown-rendered h2,
+.published-container .markdown-rendered h3,
+.published-container .markdown-rendered h4,
+.published-container .markdown-rendered h5,
+.published-container .markdown-rendered h6 {
+  border-bottom: none;
+  padding-bottom: 0.5em;
+}
+
+.backlinks {
+  border-top: none;
+}

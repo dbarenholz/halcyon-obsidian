@@ -1,0 +1,8 @@
+/* Search */
+body:is(.theme-dark) {
+	--search-clear-button-color: var(--halcyon-palette-salmon);
+	//--search-clear-button-size: 13px;
+	--search-icon-color: var(--halcyon-accent);
+	//--search-icon-size: 18px;
+	//--search-result-background: var(--background-primary);
+}

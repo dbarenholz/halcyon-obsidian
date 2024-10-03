@@ -1,0 +1,39 @@
+/*
+  github: ttps://github.com/blacksmithgu/obsidian-dataview
+  id: obsidian-dynamic-highlights
+  support added on: 29/09/2023
+*/
+
+/*
+  - This plugin dynamically highlights text based on selection.
+  - It has a built-in editor for styles, which uses code mirror.
+  - sailKite styled it to approximate Halcyon coding style 
+*/
+
+// Dynamic Highlights (by sailKite)
+body:is(.theme-dark) .modal .cm-gutters {
+	color: var(--halcyon-accent);
+}
+body:is(.theme-dark) .modal .cm-line {
+	color: var(--text-normal);
+
+	& .ͼi {
+		color: var(--halcyon-palette-cyan);
+	}
+
+	& .ͼj {
+		color: var(--halcyon-palette-orange);
+	}
+
+	& .ͼc {
+		color: var(--halcyon-accent);
+	}
+
+	& .ͼb {
+		color: var(--halcyon-palette-yellow);
+	}
+
+	& .cm-matchingBracket {
+		color: var(--halcyon-palette-lilac);
+	}
+}

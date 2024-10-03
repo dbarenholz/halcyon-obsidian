@@ -1,0 +1,6 @@
+/* Workspace */
+body:is(.theme-dark) {
+	--workspace-background-translucent: unset;
+
+	//  --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.6);
+}

@@ -1,7 +1,8 @@
-@import 'window/divider.scss';
-@import 'window/ribbon.scss';
-@import 'window/scrollbar.scss';
-@import 'window/sidebar.scss';
-@import 'window/status-bar.scss';
-@import 'window/window-frame.scss';
-@import 'window/workspace.scss';
+@use 'window/divider';
+@use 'window/ribbon';
+@use 'window/scrollbar';
+@use 'window/sidebar';
+@use 'window/status-bar';
+@use 'window/vault-profile';
+@use 'window/window-frame';
+@use 'window/workspace';

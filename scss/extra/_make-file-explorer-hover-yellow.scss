@@ -1,0 +1,7 @@
+/* File explorer: Extra */
+body:is(.theme-dark):not(.is-grabbing):not(
+		.dont-make-file-explorer-hover-yellow
+	)
+	:is(.nav-file-title:hover, .nav-folder-title:hover) {
+	color: var(--interactive-accent-hover);
+}

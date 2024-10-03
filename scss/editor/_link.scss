@@ -1,0 +1,19 @@
+/* Link */
+body:is(.theme-dark) {
+	--link-color: var(--halcyon-palette-lilac);
+	--link-color-hover: var(--halcyon-palette-lilac-hover);
+	//--link-decoration: underline;
+	//--link-decoration-hover: underline;
+	//--link-decoration-thickness: auto;
+	//--link-weight: var(--font-weight);
+	--link-unresolved-color: var(--halcyon-palette-lilac);
+	//--link-unresolved-opacity: 0.7;
+	//--link-unresolved-filter: none;
+	--link-unresolved-decoration-style: dashed;
+	--link-unresolved-decoration-color: var(--halcyon-palette-lilac);
+	--link-external-color: var(--halcyon-palette-lilac);
+	--link-external-color-hover: var(--halcyon-palette-lilac-hover);
+	//--link-external-decoration: underline;
+	//--link-external-decoration-hover: underline;
+	//--link-external-filter: none;
+}

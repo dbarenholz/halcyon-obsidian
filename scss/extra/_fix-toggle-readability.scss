@@ -1,0 +1,7 @@
+/* Make sure difference between on/off is better visible. */
+body:is(.theme-dark):not(.no-fix-toggle-readability) .checkbox-container {
+	background-color: var(--halcyon-palette-salmon);
+}
+body:is(.theme-dark):not(.no-fix-toggle-readability) .checkbox-container.is-enabled {
+	background-color: var(--halcyon-palette-lime);
+}
