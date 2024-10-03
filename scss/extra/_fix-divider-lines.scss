@@ -1,23 +1,23 @@
-/* Vertical border line right of left sidebar */
+// Vertical border line right of left sidebar
 body:is(.theme-dark):not(.no-fix-divider-lines)
 	.workspace-split.mod-left-split
 	> .workspace-leaf-resize-handle {
 	border-right-width: 0px;
 }
-/* Vertical border line left of right sidebar */
+// Vertical border line left of right sidebar
 body:is(.theme-dark):not(.no-fix-divider-lines)
 	.workspace-split.mod-right-split
 	> .workspace-leaf-resize-handle {
 	border-left-width: 0px;
 }
-/* Horizontal border lines between tab groups */
+// Horizontal border lines between tab groups
 body:is(.theme-dark):not(.no-fix-divider-lines)
 	.workspace-split.mod-horizontal
 	> *
 	> .workspace-leaf-resize-handle {
 	border-bottom-width: 0px;
 }
-/* Vertical border line right of ribbon */
+// Vertical border line right of ribbon
 body:is(.theme-dark):not(.no-fix-divider-lines) .workspace-ribbon {
 	border-right: unset;
 }

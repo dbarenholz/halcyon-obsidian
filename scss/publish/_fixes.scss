@@ -1,0 +1,14 @@
+// A few fixes for making Halcyon snazzy on Publish
+.published-container .markdown-rendered h1,
+.published-container .markdown-rendered h2,
+.published-container .markdown-rendered h3,
+.published-container .markdown-rendered h4,
+.published-container .markdown-rendered h5,
+.published-container .markdown-rendered h6 {
+	border-bottom: none;
+	padding-bottom: 0.5em;
+}
+
+.backlinks {
+	border-top: none;
+}

@@ -1,19 +1,15 @@
-/* Tags */
+// Tags
 body:is(.theme-dark) {
 	--tag-size: var(--code-size);
 	--tag-color: var(--halcyon-palette-cyan);
 	--tag-color-hover: var(--halcyon-palette-cyan);
 	//--tag-decoration: none;
 	--tag-decoration-hover: underline;
-	--tag-background: color-mix(
-									in hsl,
-									var(--tag-color) 25%,
-									transparent
-	);
+	--tag-background: color-mix(in hsl, var(--tag-color) 25%, transparent);
 	--tag-background-hover: color-mix(
-									in hsl,
-									var(--tag-color-hover) 25%,
-									transparent
+		in hsl,
+		var(--tag-color-hover) 25%,
+		transparent
 	);
 	//--tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
 	//--tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);

@@ -1,4 +1,4 @@
-/* make suggestions yellow */
+// make suggestions yellow
 body:is(.theme-dark):not(.dont-make-prompt-suggestions-emphasized)
 	.prompt
 	> .prompt-results
@@ -6,7 +6,7 @@ body:is(.theme-dark):not(.dont-make-prompt-suggestions-emphasized)
 	.suggestion-highlight {
 	color: var(--interactive-accent);
 }
-/* make typed text bold, and yellow */
+// make typed text bold, and yellow
 body:is(.theme-dark):not(.dont-make-prompt-suggestions-emphasized)
 	.prompt
 	input.prompt-input {

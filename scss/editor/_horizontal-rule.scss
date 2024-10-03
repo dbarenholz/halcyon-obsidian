@@ -1,10 +1,10 @@
-/* Horizontal rule */
+// Horizontal rule
 body:is(.theme-dark) {
 	--hr-color: color-mix(
-			in hsl,
-			var(--text-faint),
-			var(--background-modifier-border)
-		);
+		in hsl,
+		var(--text-faint),
+		var(--background-modifier-border)
+	);
 
 	// --hr-thickness: 2px;
 }

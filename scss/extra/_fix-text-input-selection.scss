@@ -1,4 +1,4 @@
-/* Set the active/focused color of inputs to accent color, but NOT on checkboxes */
+// Set the active/focused color of inputs to accent color, but NOT on checkboxes
 body:is(.theme-dark):not(.no-fix-text-input-selection)
 	:is(
 		textarea,
@@ -14,7 +14,7 @@ body:is(.theme-dark):not(.no-fix-text-input-selection)
 	box-shadow: 0 0 0 1px var(--interactive-accent);
 }
 
-/* Fix: selecting text in input elements */
+// Fix: selecting text in input elements
 body:is(.theme-dark):not(.no-fix-text-input-selection)
 	.metadata-input-longtext::selection,
 body:is(.theme-dark):not(.no-fix-text-input-selection) input::selection,

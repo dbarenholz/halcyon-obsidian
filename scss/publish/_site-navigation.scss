@@ -1,15 +1,19 @@
 .published-container {
-//  /* Navigation */
-//  --nav-collapse-icon-color: var(--text-faint);
-//  --nav-collapse-icon-color-hover: var(--text-muted);
-//  --nav-parent-item-color: var(--text-normal);
-  --nav-parent-item-color-active: mix(var(--halcyon-accent), transparent, 75%);
-  //  --nav-parent-item-weight: var(--font-medium);
-//  --nav-item-color: var(--text-muted);
-//  --nav-item-color-hover: var(--text-normal);
-//  --nav-item-color-active: var(--text-accent);
-//  --nav-item-border-color: var(--background-modifier-border);
-//  --nav-item-border-color-hover: var(--text-normal);
-//  --nav-item-border-color-active: var(--text-accent);
-//  --nav-item-weight-active: var(--font-medium);
+	//  // Navigation
+	//  --nav-collapse-icon-color: var(--text-faint);
+	//  --nav-collapse-icon-color-hover: var(--text-muted);
+	//  --nav-parent-item-color: var(--text-normal);
+	--nav-parent-item-color-active: mix(
+		var(--halcyon-accent),
+		transparent,
+		75%
+	);
+	//  --nav-parent-item-weight: var(--font-medium);
+	//  --nav-item-color: var(--text-muted);
+	//  --nav-item-color-hover: var(--text-normal);
+	//  --nav-item-color-active: var(--text-accent);
+	//  --nav-item-border-color: var(--background-modifier-border);
+	//  --nav-item-border-color-hover: var(--text-normal);
+	//  --nav-item-border-color-active: var(--text-accent);
+	//  --nav-item-weight-active: var(--font-medium);
 }

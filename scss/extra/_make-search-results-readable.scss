@@ -1,4 +1,4 @@
-/* Make search results not yellow */
+// Make search results not yellow
 body:is(.theme-dark):not(.dont-make-search-results-readable)
 	.search-result:not(.is-collapsed)
 	.search-result-file-title {
@@ -10,7 +10,7 @@ body:is(.theme-dark):not(.dont-make-search-results-readable)
 	color: var(--text-accent);
 	font-weight: bold;
 }
-/* Make search background not yellow */
+// Make search background not yellow
 body:is(.theme-dark):not(.dont-make-search-results-readable)
 	.search-input-container
 	> input {

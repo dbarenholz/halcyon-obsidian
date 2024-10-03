@@ -12,7 +12,7 @@ You can install Halcyon through Obsidian, or manually.
 
 1. Go to `settings > appearance`.
 2. Click **Manage** next to _Themes_.
-3. Search for **Halcyon**.
+3. Search for **Halcyon** (make sure you can see dark-mode themes).
 4. Click **Install and use**.
 5. Enjoy using my favourite theme! 🥳
 
@@ -31,6 +31,11 @@ You can install Halcyon through Obsidian, or manually.
 
 -   [Chetachi](https://github.com/chetachiezikeuzor)'s [Highlightr](obsidian://show-plugin?id=highlightr-plugin) plugin: when selecting `css-classes` as option, it will by default use the Halcyon colors for its highlights.
 
+## Style Settings
+
+As of version `0.0.4` there is now a basic support for style settings.
+This version is still _work in progress_ and unreleased, but the code has been pushed to git.
+
 ## Known Issues
 
 There are a few limitations that are outside of my control as theme developer. Here's a list of them.
@@ -40,10 +45,19 @@ There are a few limitations that are outside of my control as theme developer. H
 
 _Did you find more issues? Let me know by making an [issue](https://github.com/dbarenholz/halcyon-obsidian/issues)!_
 
-## Style Settings
+## Contributing
 
-As of version `0.0.4` there is now a basic support for style settings.
-This version is still _work in progress_ and unreleased, but the code has been pushed to git.
+Feel like making Halcyon even better? Have a look at the issues with the `accepting PRs` label [here](<https://github.com/dbarenholz/halcyon-obsidian/issues?q=is%3Aissue+is%3Aopen+label%3A%22accepting+PRs%22>).
+If an issue does not have that label, but it's something you want in the theme, make sure to ping me on the issue. It would be a shame if you spent your time on something that clashes with my vision for Halcyon.
+
+To build the theme, use `npm run build`. This will do the following:
+
+1. Run the linter `npm run lint`.
+2. Compile scss to css for both the theme and publish `npm run compile`.
+3. Merge in style settings and the license file `npm run merge`.
+
+For more details, see `package.json`.
+
 
 ## License
 
@@ -61,13 +75,13 @@ This theme would never have seen its conception, if not for the following people
 
 **Version 0.0.4** (work in progress):
 
-- Add rudimentary Style Settings support.
+- Add Style Settings support.
+- Add Obsidian Publish support (thanks @Sigrunixia)!.
 
 **Version 0.0.3**:
 
 - Fix inaccurate HSL variables; this was the cause for [#4](<https://github.com/dbarenholz/halcyon-obsidian/issues/4>).
 - Fix cascading issues from inaccurate HSL variables.
-
 
 **Version 0.0.2**:
 

@@ -1,6 +1,6 @@
-/* Tabs */
+// Tabs
 body:is(.theme-dark) {
-	/* Tabs */
+	// Tabs
 	//--tab-background-active: var(--background-primary);
 	//--tab-text-color: var(--text-faint);
 	--tab-text-color-active: var(--text-accent);
@@ -20,7 +20,7 @@ body:is(.theme-dark) {
 	//--tab-width: 200px;
 	//--tab-max-width: 320px;
 
-	///* Stacked tabs */
+	//// Stacked tabs
 	//--tab-stacked-pane-width: 700px;
 	//--tab-stacked-header-width: var(--header-height);
 	//--tab-stacked-font-size: var(--font-ui-small);

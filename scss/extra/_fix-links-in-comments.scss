@@ -1,4 +1,4 @@
-/* Fix: do not color links in comments */
+// Fix: do not color links in comments
 body:is(.theme-dark):not(.no-fix-links-in-comments)
 	:is(
 		.cm-comment.cm-hmd-internal-link,
@@ -7,7 +7,7 @@ body:is(.theme-dark):not(.no-fix-links-in-comments)
 	) {
 	color: var(--code-comment);
 }
-/* Fix: do not underline links on comments */
+// Fix: do not underline links on comments
 body:is(.theme-dark):not(.no-fix-links-in-comments)
 	:is(
 		.cm-comment.cm-string,

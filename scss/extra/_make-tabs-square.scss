@@ -1,6 +1,6 @@
 // Make tabs square
 
-/* Remove left padding and top margin in a tab group: approximate rectangular tabs */
+// Remove left padding and top margin in a tab group: approximate rectangular tabs
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-split:not(.mod-left-split, .mod-right-split)
 	.workspace-tabs:not(.mod-stacked)
@@ -8,21 +8,21 @@ body:is(.theme-dark):not(.dont-make-tabs-square)
 	padding-left: 0px;
 	margin-top: 0px;
 }
-/* Counterbalance: add padding internally instead. */
+// Counterbalance: add padding internally instead.
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-split:not(.mod-left-split, .mod-right-split)
 	.workspace-tabs:not(.mod-stacked)
 	.workspace-tab-header-inner-title {
 	padding-left: 10px;
 }
-/* Counterbalance #2: remove padding from icons */
+// Counterbalance #2: remove padding from icons
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-split:not(.mod-left-split, .mod-right-split)
 	.workspace-tabs:not(.mod-stacked)
 	.workspace-tab-header-inner-icon {
 	padding-right: 0px;
 }
-/* Counterbalance #3: align tabs back with the + and dropdown icons */
+// Counterbalance #3: align tabs back with the + and dropdown icons
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-split:not(.mod-left-split, .mod-right-split)
 	.workspace-tabs:not(.mod-stacked)
@@ -30,28 +30,28 @@ body:is(.theme-dark):not(.dont-make-tabs-square)
 	> .workspace-tab-header {
 	padding: 3px 6px 0;
 }
-/* Add line to tabs: line itself */
+// Add line to tabs: line itself
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-tabs:not(.mod-stacked)
 	.workspace-tab-header:is(.mod-active, .is-active)
 	> .workspace-tab-header-inner {
 	border-bottom: 1px solid var(--interactive-accent);
 }
-/* Add line to tabs: line on hover */
+// Add line to tabs: line on hover
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-tabs:not(.mod-stacked)
 	.workspace-tab-header
 	> .workspace-tab-header-inner:hover {
 	border-bottom: 1px solid var(--interactive-accent);
 }
-/* Add line to tabs: sneaky hack to fix spacing */
+// Add line to tabs: sneaky hack to fix spacing
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	.workspace-tabs:not(.mod-stacked)
 	.workspace-tab-header
 	> .workspace-tab-header-inner {
 	border-bottom: 1px solid var(--background-secondary);
 }
-/* Sidebar tabs: align with main tabs */
+// Sidebar tabs: align with main tabs
 body:is(.theme-dark):not(.dont-make-tabs-square)
 	:is(.mod-left-split, .mod-right-split)
 	.workspace-tab-header-container-inner {

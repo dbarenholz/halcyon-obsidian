@@ -1,4 +1,4 @@
-/* Callout */
+// Callout
 body:is(.theme-dark) {
 	//--callout-border-width: 0px;
 	//--callout-border-opacity: 0.25;
@@ -11,7 +11,6 @@ body:is(.theme-dark) {
 	//--callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
 	//--callout-content-padding: 0;
 	//--callout-content-background: transparent;
-
 
 	//--callout-bug: var(--color-red-rgb);
 	//--callout-default: var(--color-blue-rgb);

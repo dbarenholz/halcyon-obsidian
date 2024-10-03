@@ -1,10 +1,9 @@
-/* Code */
+// Code
 body:is(.theme-dark) {
 	//--code-white-space: pre-wrap;
 	//--code-radius: var(--radius-s);
 	//--code-size: var(--font-smaller);
 	--code-background: var(--halcyon-base-blue-01);
-
 
 	// Syntax Highlighting
 	--code-normal: var(--halcyon-palette-cyan);

@@ -1,15 +1,15 @@
 body:is(.theme-dark)
-.markdown-source-view:is(.is-live-preview)
-.callout-content
-> .callout {
-  margin: 1em 0;
-  padding: var(--callout-padding);
+	.markdown-source-view:is(.is-live-preview)
+	.callout-content
+	> .callout {
+	margin: 1em 0;
+	padding: var(--callout-padding);
 }
 
-/* Fix: codeblocks in callouts in live preview */
+// Fix: codeblocks in callouts in live preview
 body:is(.theme-dark)
-.markdown-source-view:is(.is-live-preview)
-.callout-content
-> pre {
-  margin: 1em 0;
+	.markdown-source-view:is(.is-live-preview)
+	.callout-content
+	> pre {
+	margin: 1em 0;
 }

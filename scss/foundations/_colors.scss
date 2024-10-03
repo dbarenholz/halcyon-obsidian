@@ -1,4 +1,4 @@
-/* Colors */
+// Colors
 body:is(.theme-dark) {
 	//The 12 base colors is a neutral color palette ranging from dark to light (darkmode).
 	--color-base-00: var(--halcyon-base-blue-01);
@@ -43,7 +43,6 @@ body:is(.theme-dark) {
 	--background-primary-alt: var(--halcyon-base-blue-03);
 	--background-secondary: var(--halcyon-base-blue-01);
 
-
 	--background-modifier-hover: var(--halcyon-base-blue-03);
 	--background-modifier-active-hover: var(--halcyon-base-blue-03);
 	--background-modifier-border: var(--halcyon-base-blue-02-03-mix);
@@ -58,29 +57,27 @@ body:is(.theme-dark) {
 
 	//	--background-modifier-form-field: var(--color-base-00); Suggested var(--halcyon-base-blue-02);
 
-
-	/* Interactive Colors  */
+	// Interactive Colors
 	--interactive-normal: color-mix(
-									in hsl,
-									var(--background-primary) 75%,
-									transparent
+		in hsl,
+		var(--background-primary) 75%,
+		transparent
 	);
 	--interactive-hover: var(--background-primary);
 	--interactive-accent: var(--halcyon-accent);
 	--interactive-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--interactive-accent-hover: color-mix(
-									in hsl,
-									var(--halcyon-accent) 75%,
-									transparent
+		in hsl,
+		var(--halcyon-accent) 75%,
+		transparent
 	);
 
-
-	/* Text Colors */
+	// Text Colors
 	--text-normal: var(--halcyon-text-normal);
 	--text-muted: color-mix(
-									in hsl,
-									var(--halcyon-text-muted),
-									var(--text-normal)
+		in hsl,
+		var(--halcyon-text-muted),
+		var(--text-normal)
 	);
 	--text-faint: var(--halcyon-text-muted);
 	--text-on-accent: var(--halcyon-base-blue-03);
@@ -91,9 +88,9 @@ body:is(.theme-dark) {
 	--text-accent: var(--halcyon-accent);
 	--text-accent-hover: var(--halcyon-accent-hover);
 	--text-selection: color-mix(
-									in hsl,
-									var(--halcyon-base-blue-03-04-mix) 35%,
-									transparent
+		in hsl,
+		var(--halcyon-base-blue-03-04-mix) 35%,
+		transparent
 	);
 	--text-highlight-bg-rgb: 255, 208, 0;
 	--text-highlight-bg: rgb(var(--halcyon-base-blue-03-rgb));

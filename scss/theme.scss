@@ -1,15 +1,11 @@
-// Halcyon Colors
 @use 'halcyon-colors' as *;
 
-// Built-in Obsidian variables
-@use 'foundations' as *;
+@use '_foundations' as *;
 @use '_components' as *;
 @use '_editor' as *;
 @use '_core-plugins' as *;
 @use '_window' as *;
 
-// Extra styles not accessible through built-in variables
 @use '_extra-additions' as *;
 
-// Community plugins
 @use '_plugins' as *;
