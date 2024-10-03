@@ -1,5 +1,5 @@
 /* === The Halcyon Color Scheme === */
-body.theme-dark {
+body:is(.theme-dark) {
 	--halcyon-base-blue-01: #171c28; /* Workbench Background */
 	--halcyon-base-blue-02: #1d2433; /* Editor Background*/
 	--halcyon-base-blue-03: #2f3b54; /* Highlight, widgets, panel*/

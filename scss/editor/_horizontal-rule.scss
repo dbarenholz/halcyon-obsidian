@@ -4,6 +4,7 @@ body:is(.theme-dark) {
 			in hsl,
 			var(--text-faint),
 			var(--background-modifier-border)
-		)
+		);
+
 	// --hr-thickness: 2px;
 }

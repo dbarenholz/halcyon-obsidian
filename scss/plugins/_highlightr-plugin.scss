@@ -58,17 +58,17 @@ body:is(.theme-dark)
 }
 
 // Padding/margin fixes for the included highlighting styles
-body.theme-dark.highlightr-rounded
+body:is(.theme-dark).highlightr-rounded
 	:is(mark, span.cm-highlight, .markdown-preview-view mark) {
 	padding-top: 0;
 	padding-bottom: 0;
 }
-body.theme-dark.highlightr-realistic
+body:is(.theme-dark).highlightr-realistic
 	:is(mark, span.cm-highlight, .markdown-preview-view mark) {
 	padding-top: 0;
 	padding-bottom: 0;
 }
-body.theme-dark.highlightr-lowlight
+body:is(.theme-dark).highlightr-lowlight
 	:is(mark, span.cm-highlight, .markdown-preview-view mark) {
 	--lowlight-background: var(--background-primary);
 	background-image: linear-gradient(
@@ -79,7 +79,7 @@ body.theme-dark.highlightr-lowlight
 		var(--lowlight-background) 40%
 	) !important;
 }
-body.theme-dark.highlightr-floating
+body:is(.theme-dark).highlightr-floating
 	mark[class*='hltr']:last-of-type:not(mark[class*='hltr']:only-of-type) {
 	--floating-background: var(--background-primary);
 	--floating-size: 20%;
