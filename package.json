@@ -3,9 +3,9 @@
 	"version": "0.0.4",
 	"scripts": {
 		"build": "npm run lint; npm run compile; npm run merge",
-		"compile":"npm run compile-main; npm run compile-publish",
+		"compile": "npm run compile-main; npm run compile-publish",
 		"compile-main": "sass --no-source-map ./scss/theme.scss ./css/theme.min.css -s compressed",
-		"compile-publish" : "sass --no-source-map ./scss/theme-publish.scss ./css/publish.css -s compressed",
+		"compile-publish": "sass --no-source-map ./scss/theme-publish.scss ./css/publish.css -s compressed",
 		"dev": "node ./scripts/dev.js",
 		"lint": "prettier ./scss/ --write",
 		"merge": "node ./scripts/merge.js",
@@ -14,5 +14,8 @@
 	"devDependencies": {
 		"prettier": "3.2.5",
 		"sass": "^1.68.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5"
 	}
 }

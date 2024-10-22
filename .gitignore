@@ -1,5 +1,5 @@
 # vscode
-.vscode 
+.vscode
 
 # Intellij
 *.iml
@@ -16,3 +16,6 @@ node_modules
 
 # PSD files used to create images for readme
 *.psd
+
+# dotenv
+.env

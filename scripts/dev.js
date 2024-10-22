@@ -1,7 +1,10 @@
 const fs = require('fs');
 const { spawn } = require('child_process');
 
-const PLAYGROUND   = "/home/dan/obsidian/playground"
+// Load .env file
+require("dotenv").config()
+
+const PLAYGROUND   = `${process.env.PLAYGROUND_LOCATION}`
 const THEME        = "halcyon"
 const DEST         = `${PLAYGROUND}/.obsidian/themes/${THEME}`
 const PUBLISH_DEST = `${PLAYGROUND}/publish.css`
