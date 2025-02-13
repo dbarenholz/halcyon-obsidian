@@ -1,0 +1,21 @@
+/*
+  github: https://github.com/mProjectsCode/obsidian-lemons-search-plugin
+  id: lemons-search
+  support added on: 13/02/2025
+*/
+
+// make suggestions yellow
+body:is(.theme-dark):not(.dont-make-prompt-suggestions-emphasized)
+	.lemons-search
+	.prompt-results
+	> .suggestion-item
+	.suggestion-highlight {
+	color: var(--interactive-accent);
+}
+// make typed text bold, and yellow
+body:is(.theme-dark):not(.dont-make-prompt-suggestions-emphasized)
+	.lemons-search
+	input.prompt-input {
+	color: var(--interactive-accent);
+	font-weight: bold;
+}
